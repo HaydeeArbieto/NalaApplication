@@ -21,8 +21,5 @@ namespace NalaApplication.Data
 
         public DbSet<Order> Orders { get; set; }
 
-        public DbSet<CartItem> CartItems { get; set; }
-
-
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -7,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NalaApplication.Data;
+using NalaApplication.Repositories;
+using NalaApplication.Services;
 using System.Threading.Tasks;
 
 namespace NalaApplication
@@ -24,10 +27,13 @@ namespace NalaApplication
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDistributedMemoryCache();
             services.AddSession();
             // In production, the Angular files will be served from this directory
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("DefaultConnection"));
-			services.AddSpaStaticFiles(configuration =>
+            services.AddTransient<CartsService>();
+            services.AddTransient<ProductRepository>();
+            services.AddSpaStaticFiles(configuration =>
 			{
 				configuration.RootPath = "ClientApp/dist";
 			});
@@ -45,11 +51,10 @@ namespace NalaApplication
 				app.UseExceptionHandler("/Error");
 				app.UseHsts();
 			}
-
-			app.UseHttpsRedirection();
+            app.UseSession();
+            app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseSpaStaticFiles();
-            app.UseSession();
             app.UseMvc(routes =>
 			{
 				routes.MapRoute(

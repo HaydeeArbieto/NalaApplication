@@ -16,9 +16,11 @@ namespace NalaApplication.Repositories
             _context = context;
         }
 
-        public async Task<List<Product>> GetProductAsync()
+        public async Task<List<Product>> GetProductsAsync()
         {
             return await _context.Products.ToListAsync(); 
         }
+
+       
     }
 }
