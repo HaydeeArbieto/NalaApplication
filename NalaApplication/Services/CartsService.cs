@@ -51,7 +51,17 @@ namespace NalaApplication.Services
             return cart;
         }
 
-    
+        public Cart RemoveItemToCart(int id)
+        {
+            var cart = SessionHelper.GetObjectFromJson<Cart>(_session, "cart");
+            int index = isExist(cart, id);
+            cart.CartItems.RemoveAt(index);
+            SessionHelper.SetObjectAsJson(_session, "cart", cart);
+            return cart;
+        }
+
+
+
 
         private async Task<Product> GetProductFromRepository(int id)
         {
