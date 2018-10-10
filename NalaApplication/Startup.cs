@@ -24,7 +24,7 @@ namespace NalaApplication
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            services.AddSession();
             // In production, the Angular files will be served from this directory
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("DefaultConnection"));
 			services.AddSpaStaticFiles(configuration =>
@@ -49,8 +49,8 @@ namespace NalaApplication
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseSpaStaticFiles();
-
-			app.UseMvc(routes =>
+            app.UseSession();
+            app.UseMvc(routes =>
 			{
 				routes.MapRoute(
 					name: "default",
