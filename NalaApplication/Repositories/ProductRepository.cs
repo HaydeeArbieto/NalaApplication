@@ -21,6 +21,21 @@ namespace NalaApplication.Repositories
             return await _context.Products.ToListAsync(); 
         }
 
-       
+        public async Task<List<Product>> RemoveProductAsync(Product product)
+        {
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+            return await GetProductsAsync();
+        }
+
+        public async Task<List<Product>> AddProductAsync(Product product)
+        {
+            await _context.Products.AddAsync(product);
+            await _context.SaveChangesAsync();
+            return await GetProductsAsync();
+        }
+
+
+
     }
 }
