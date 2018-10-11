@@ -4,10 +4,9 @@
     padding-top: 50px;
   }
 }
-
 #logo-image {
   margin: 50px;
-  width: 600px;
+  width: 700px;
   border-bottom: 20px solid;
   border-color: rgb(255,165,0);
   /* Align image center */
@@ -15,25 +14,38 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 #menu-information-container li {
   list-style-type: none;
 }
-
-.container a {
-  color: rgb(255,165,0);
-}
-
 #main-footer {
   margin: 50px;
   border-top: 20px solid;
   border-color: rgb(255,165,0);
 }
-
 .col-sm-2 li {
   list-style-type: none;
 }
-
 footer h3 {
   color: rgb(255,165,0);
+}
+#div-navbar1 a, #label-currency {
+  font-size: 11px;
+  font-weight: bold;
+  color: rgba(213, 183, 114, 1);
+}
+#navbar2 ul {
+  display: inline-block;
+}
+#currency-select option {
+  color: rgba(213, 183, 114, 1);
+}
+#navbar-upp {
+  padding: 2px;
+}
+#div-navbar1 {
+  margin-left: inherit;
+}
+#div-navbar2 a {
+  color: rgba(213, 183, 114, 1);
+  font-weight: bold;
 }

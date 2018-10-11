@@ -16,8 +16,6 @@ import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +28,6 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
     SizeGuideComponent,
     TermsConditionsComponent,
     ContactComponent
-
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -46,7 +43,6 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
       { path: 'size-guide', component: SizeGuideComponent },
       { path: 'terms-conditions', component: TermsConditionsComponent },
       { path: 'contact', component: ContactComponent },
-
     ])
   ],
   providers: [],

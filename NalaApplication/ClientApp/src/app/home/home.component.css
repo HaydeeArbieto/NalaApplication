@@ -1,4 +1,20 @@
-#nala93-img, #nala82-img {
+#nala93-img  {
   width: 500px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 400px;
+  margin-right: 50px;
+}
+#nala82-img {
+  width: 500px;
+  margin-top: 20px;
+}
+#div-sorting {
+  width: 210px;
+  margin-left: 400px;
+}
+#sorting option {
+  color: rgba(213, 183, 114, 1);
+}
+#sorting option:first-child { /*??*/
+   color: red;
 }
