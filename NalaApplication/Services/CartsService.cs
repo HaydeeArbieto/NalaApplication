@@ -13,11 +13,11 @@ namespace NalaApplication.Services
 {
     public class CartsService
     {
-        private readonly ProductRepository _rep;
+        private readonly ProductsRepository _rep;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private ISession _session => _httpContextAccessor.HttpContext.Session;
 
-        public CartsService(IHttpContextAccessor httpContextAccessor, ProductRepository rep)
+        public CartsService(IHttpContextAccessor httpContextAccessor, ProductsRepository rep)
         {
             _httpContextAccessor = httpContextAccessor;
             _rep = rep;

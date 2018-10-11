@@ -13,8 +13,8 @@ namespace NalaApplication.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private ProductRepository _rep;
-        public ProductsController(ProductRepository rep)
+        private ProductsRepository _rep;
+        public ProductsController(ProductsRepository rep)
         {
             _rep = rep;
         }

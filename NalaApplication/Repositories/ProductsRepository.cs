@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace NalaApplication.Repositories
 {
-    public class ProductRepository
+    public class ProductsRepository
     {
         private AppDbContext _context;
-        public ProductRepository(AppDbContext context)
+        public ProductsRepository(AppDbContext context)
         {
             _context = context;
         }
@@ -31,6 +31,13 @@ namespace NalaApplication.Repositories
         public async Task<List<Product>> AddProductAsync(Product product)
         {
             await _context.Products.AddAsync(product);
+            await _context.SaveChangesAsync();
+            return await GetProductsAsync();
+        }
+
+        public async Task<List<Product>> UppdateProductAsync(Product product)
+        {
+             _context.Products.Update(product);
             await _context.SaveChangesAsync();
             return await GetProductsAsync();
         }
