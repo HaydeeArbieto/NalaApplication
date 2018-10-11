@@ -22,7 +22,7 @@ namespace NalaApplication.Controllers
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
-            return await _rep.GetProductAsync();
+            return await _rep.GetProductsAsync();
         }
 
         // GET: api/Products/5
