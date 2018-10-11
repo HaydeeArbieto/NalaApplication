@@ -35,6 +35,12 @@ namespace NalaApplication.Repositories
             return await GetProductsAsync();
         }
 
+        public async Task<Product> GetProductByIdAsync(int id)
+        {
+            var products = await GetProductsAsync();
+            return  products.FirstOrDefault(x => x.Id == id);
+        }
+
         public async Task<List<Product>> UppdateProductAsync(Product product)
         {
              _context.Products.Update(product);
