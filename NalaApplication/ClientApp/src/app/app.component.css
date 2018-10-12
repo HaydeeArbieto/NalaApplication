@@ -52,3 +52,7 @@ footer h3 {
 #about, #returns, #size-guide, #shiping-delivery, #instagram, #facebook, #snapchat, #faq-div a {
   color: rgba(213, 183, 114, 1);
 }
+#cart {
+  width: 23px;
+  height: 23px;
+}
