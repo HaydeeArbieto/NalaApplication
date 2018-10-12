@@ -15,6 +15,7 @@
 #sorting option {
   color: rgba(213, 183, 114, 1);
 }
-#sorting option:first-child { /*??*/
-   color: red;
+  #sorting option:first-child { /*??*/
+  color: rgba(213, 183, 114, 1);
+  font-weight: bold;
 }
