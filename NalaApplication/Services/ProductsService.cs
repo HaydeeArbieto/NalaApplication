@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,16 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 using NalaApplication.Models;
 using NalaApplication.Repositories;
 
+
 namespace NalaApplication.Services
 {
     public class ProductsService
     {
+
         private ProductsRepository _rep;
+
+       
         public ProductsService(ProductsRepository rep)
         {
             _rep = rep;
         }
 
+         
         internal async Task<ActionResult<List<Product>>> GetProductsAsync()
         {
             var products = await _rep.GetProductsAsync();
@@ -56,11 +62,11 @@ namespace NalaApplication.Services
            
         }
 
-        internal async Task<ActionResult<List<Product>>> UppdateProductAsync(Product product)
+        internal async Task<ActionResult<List<Product>>> UpdateProductAsync(Product product)
         {
             if(product != null)
             {
-                return await _rep.UppdateProductAsync(product);
+                return await _rep.UpdateProductAsync(product);
             }
             else
             {

@@ -47,7 +47,7 @@ namespace NalaApplication.Controllers
         {
             if(ModelState.IsValid)
             {
-                return await _serv.UppdateProductAsync(product);
+                return await _serv.UpdateProductAsync(product);
             }
 
             return NotFound();
