@@ -65,8 +65,7 @@ namespace NalaApplication.Services
 
         private async Task<Product> GetProductFromRepository(int id)
         {
-            var products = await _rep.GetProductsAsync();
-            return products.FirstOrDefault(x => x.Id == id);
+            return await _rep.GetProductByIdAsync(id);
         }
 
         private int isExist(Cart cart, int id)
