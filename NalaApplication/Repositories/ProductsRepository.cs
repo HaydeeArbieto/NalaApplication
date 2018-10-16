@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace NalaApplication.Repositories
 {
-    public class ProductRepository
+    public class ProductsRepository
     {
         private AppDbContext _context;
-        public ProductRepository(AppDbContext context)
+        public ProductsRepository(AppDbContext context)
         {
             _context = context;
         }
@@ -19,11 +19,6 @@ namespace NalaApplication.Repositories
         public async Task<List<Product>> GetProductsAsync()
         {
             return await _context.Products.ToListAsync(); 
-        }
-
-        public async Task<Product> GetProductByIdAsync(int id)
-        {
-            return await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<List<Product>> RemoveProductAsync(Product product)
@@ -40,12 +35,19 @@ namespace NalaApplication.Repositories
             return await GetProductsAsync();
         }
 
-        public async Task<List<Product>> UpdateProductAsync(Product product)
+        public async Task<Product> GetProductByIdAsync(int id)
         {
-            _context.Update(product);
+            var products = await GetProductsAsync();
+            return  products.FirstOrDefault(x => x.Id == id);
+        }
+
+        public async Task<List<Product>> UppdateProductAsync(Product product)
+        {
+             _context.Products.Update(product);
             await _context.SaveChangesAsync();
             return await GetProductsAsync();
         }
+
 
 
     }

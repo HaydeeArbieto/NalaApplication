@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NalaApplication.Models;
 using NalaApplication.Repositories;
+using NalaApplication.Services;
 
 namespace NalaApplication.Controllers
 {
@@ -13,41 +14,50 @@ namespace NalaApplication.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private ProductRepository _rep;
-        public ProductsController(ProductRepository rep)
+        private ProductsService _serv;
+        public ProductsController(ProductsService   serv)
         {
-            _rep = rep;
+            _serv = serv;
         }
         // GET: api/Products
         [HttpGet]
-        public async Task<IEnumerable<Product>> Get()
+        public async Task<ActionResult<List<Product>>> Get()
         {
-            return await _rep.GetProductAsync();
+            
+            return await _serv.GetProductsAsync();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public async Task<ActionResult<Product>> Get(int id)
         {
-            return "value";
+                return await _serv.GetProductByIdAsync(id);
         }
 
         // POST: api/Products
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<List<Product>>> Post([FromBody] Product product)
         {
+            return await _serv.AddProductAsync(product);
         }
 
         // PUT: api/Products/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult<List<Product>>> Put(int id, [FromBody] Product product)
         {
+            if(ModelState.IsValid)
+            {
+                return await _serv.UppdateProductAsync(product);
+            }
+
+            return NotFound();
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult<List<Product>>> Delete(int id)
         {
+            return await _serv.RemoveProductAsync(id);
         }
     }
 }
