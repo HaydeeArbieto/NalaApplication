@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NalaApplication.Constants;
 using NalaApplication.Models;
 using NalaApplication.Repositories;
 
@@ -15,14 +16,14 @@ namespace NalaApplication.Services
 
         private ProductsRepository _rep;
 
-       
+
         public ProductsService(ProductsRepository rep)
         {
             _rep = rep;
         }
 
          
-        internal async Task<ActionResult<List<Product>>> GetProductsAsync()
+        public async Task<ActionResult<List<Product>>> GetProductsAsync()
         {
             var products = await _rep.GetProductsAsync();
             if(products != null)
@@ -31,7 +32,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new NotFoundResult();
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductsNotFound });
             }
           
         }
@@ -44,25 +45,32 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestResult();
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ProductNotNull });
             }
         }
 
-        internal async Task<ActionResult<Product>> GetProductByIdAsync(int id)
+        public async Task<ActionResult<Product>> GetProductByIdAsync(int id)
         {
-            var product = await GetProductByIdAsync(id);
-            if(product != null)
+            if(id != 0)
             {
-                return await _rep.GetProductByIdAsync(id);
+                var product = await GetProductByIdAsync(id);
+                if (product != null)
+                {
+                    return await _rep.GetProductByIdAsync(id);
+                }
+                else
+                {
+                    return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.IdCantBeZero});
+                } 
             }
             else
             {
-                return new NotFoundResult();
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.IdCantBeZero });
             }
            
         }
 
-        internal async Task<ActionResult<List<Product>>> UpdateProductAsync(Product product)
+        public async Task<ActionResult<List<Product>>> UpdateProductAsync(Product product)
         {
             if(product != null)
             {
@@ -70,11 +78,11 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestResult();
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductNotNull });
             }
         }
 
-        internal async Task<ActionResult<List<Product>>> RemoveProductAsync(int id)
+        public async Task<ActionResult<List<Product>>> RemoveProductAsync(int id)
         {
             if(id > 0)
             {
@@ -85,11 +93,11 @@ namespace NalaApplication.Services
                 }
                 else
                 {
-                    return new NotFoundResult();
+                    return  new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductNotFound });
                 }
             }
 
-            return new BadRequestResult();
+            return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.IdCantBeZero });
         }
     }
 }
