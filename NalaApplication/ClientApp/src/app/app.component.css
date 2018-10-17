@@ -43,7 +43,7 @@ footer h3 {
   padding: 2px;
 }
 #div-navbar1 {
-  margin-left: inherit;
+  margin-left: initial;
 }
 #div-navbar2 a {
   color: rgba(213, 183, 114, 1);
@@ -55,4 +55,20 @@ footer h3 {
 #cart {
   width: 23px;
   height: 23px;
+}
+#li-currency {
+  margin-left: 375px;
+  margin-top: 15px;
+}
+/*#imput-search {
+  border-color: rgb(255,165,0);
+}
+#button-search {
+  background: rgb(255,165,0);
+}*/
+.search-container {
+  margin-top: 25px;
+}
+#div-navbar2 {
+  margin-right: inherit;
 }
