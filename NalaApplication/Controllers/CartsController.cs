@@ -9,7 +9,7 @@ namespace NalaApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CartsController : ControllerBase
+    public class CartsController : Controller
     {
         // GET: api/Cart
         [HttpGet]
@@ -19,7 +19,7 @@ namespace NalaApplication.Controllers
         }
 
         // GET: api/Cart/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetCart")]
         public string Get(int id)
         {
             return "value";

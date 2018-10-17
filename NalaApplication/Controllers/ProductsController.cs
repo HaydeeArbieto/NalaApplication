@@ -12,10 +12,10 @@ namespace NalaApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class ProductsController : Controller
     {
         private ProductsService _serv;
-        public ProductsController(ProductsService   serv)
+        public ProductsController(ProductsService serv)
         {
             _serv = serv;
         }
@@ -28,7 +28,7 @@ namespace NalaApplication.Controllers
         }
 
         // GET: api/Products/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetProduct")]
         public async Task<ActionResult<Product>> Get(int id)
         {
                 return await _serv.GetProductByIdAsync(id);

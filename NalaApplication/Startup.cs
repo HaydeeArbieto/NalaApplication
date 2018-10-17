@@ -32,7 +32,11 @@ namespace NalaApplication
             // In production, the Angular files will be served from this directory
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("DefaultConnection"));
             services.AddTransient<CartsService>();
+            services.AddTransient<ProductsService>();
             services.AddTransient<ProductsRepository>();
+            services.AddTransient<CartsService>();
+            services.AddTransient<CategoriesRepository>();
+            services.AddTransient<CategoriesService>();
             services.AddSpaStaticFiles(configuration =>
 			{
 				configuration.RootPath = "ClientApp/dist";
