@@ -48,6 +48,7 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
     HttpClientModule,
    
     RouterModule.forRoot([
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent, pathMatch: 'full' },
       {
         path: 'my-account', component: MyAccountComponent,
