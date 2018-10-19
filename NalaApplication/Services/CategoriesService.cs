@@ -62,11 +62,11 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<List<Category>>> RemoveCategoryAsync(Category category)
+        public async Task<ActionResult<List<Category>>> RemoveCategoryAsync(int id)
         {
-            if (category != null)
+            if (id != 0)
             {
-                return await _rep.RemoveCategoryAsync(category);
+                return await _rep.RemoveCategoryAsync(id);
             }
             else
             {

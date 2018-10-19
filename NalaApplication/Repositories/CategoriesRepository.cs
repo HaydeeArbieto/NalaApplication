@@ -26,8 +26,9 @@ namespace NalaApplication.Repositories
             return await GetAllCategoriesAsync();
         }
 
-        public async Task<List<Category>> RemoveCategoryAsync(Category category)
+        public async Task<List<Category>> RemoveCategoryAsync(int id)
         {
+            var category = await GetCategoryById(id);
              _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
             return await GetAllCategoriesAsync();
@@ -40,6 +41,12 @@ namespace NalaApplication.Repositories
             await _context.SaveChangesAsync();
             return await GetAllCategoriesAsync();
 
+        }
+
+        public async Task<Category> GetCategoryById(int id)
+        {
+            var categories = await GetAllCategoriesAsync();
+            return categories.FirstOrDefault(x => x.Id == id);
         }
     }
 }
