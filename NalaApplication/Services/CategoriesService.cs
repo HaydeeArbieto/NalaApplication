@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NalaApplication.Constants;
+using NalaApplication.Extensions;
 using NalaApplication.Models;
 using NalaApplication.Repositories;
 using System;
@@ -50,16 +51,56 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<List<Category>>> AddCategoryAsync(Category category)
+        public async Task<ActionResult<List<Category>>> AddCategoryAsync(string name)
         {
-            if(category != null)
+            if(name != null)
             {
-                return await _rep.AddCategoryAsync(category);
+                if(await CheckIfCategoryExistsAsync(name))
+                {
+                    return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryAlreadyExists });
+                }
+                else
+                {
+                    Category category = CreateCategory(name);
+                    return await _rep.AddCategoryAsync(category);
+                }
             }
             else
             {
                 return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryNotFound });
             }
+        }
+
+        public async Task<bool> CheckIfCategoryExistsAsync(string name)
+        {
+            var category = await GetCategoryBySearchAsync(name);
+            if (category != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<Category> GetCategoryBySearchAsync(string name)
+        {
+            if(string.IsNullOrEmpty(name))
+            {
+                return null;
+            }
+            else
+            {
+                var categories = await _rep.GetAllCategoriesAsync();
+                var category = categories.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+                return category;
+            }
+        }
+
+        public Category CreateCategory(string name)
+        {
+            return new Category { Name = name.UppercaseFirst() };
         }
 
         public async Task<ActionResult<List<Category>>> RemoveCategoryAsync(int id)

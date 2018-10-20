@@ -20,5 +20,7 @@ namespace NalaApplication.Constants
         public static string CategoriesNotFound => "Categories can´t be found";
 
         public static string CategoryNotFound => "Category can´t be found";
+
+        public static string CategoryAlreadyExists => "Category already exists";
     }
 }

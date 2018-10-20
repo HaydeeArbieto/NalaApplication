@@ -35,9 +35,9 @@ namespace NalaApplication.Controllers
 
         // POST: api/Categories
         [HttpPost]
-        public async Task<ActionResult<List<Category>>> Post([FromBody] Category category)
+        public async Task<ActionResult<List<Category>>> Post([FromBody] string name)
         {
-            return await _service.AddCategoryAsync(category);
+            return await _service.AddCategoryAsync(name);
         }
 
         // PUT: api/Categories/5
