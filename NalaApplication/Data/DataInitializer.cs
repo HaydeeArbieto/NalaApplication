@@ -8,6 +8,7 @@ namespace NalaApplication.Data
 {
     public class DataInitializer
     {
+        //populates the in memorydatabase with items
         public static async Task Initializer(AppDbContext context)
         {
             var skirts = new Category { Name = "Skirts" };
