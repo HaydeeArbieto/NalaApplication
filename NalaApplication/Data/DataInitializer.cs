@@ -18,14 +18,43 @@ namespace NalaApplication.Data
             await context.AddRangeAsync(skirts, dress, tops, pants);
             await context.SaveChangesAsync();
 
+
+            var black = new Color { Name = "Black" };
+            var white = new Color { Name = "White" };
+            var grey = new Color { Name = "Grey" };
+            var red = new Color { Name = "Red" };
+            var blue = new Color { Name = "Blue" };
+            var green = new Color { Name = "Green" };
+            var pink = new Color { Name = "Pink" };
+            var purple = new Color { Name = "Purple" };
+            var orange = new Color { Name = "Orange" };
+            var yellow = new Color { Name = "Yellow" };
+            var brown = new Color { Name = "Brown" };
+            var beige = new Color { Name = "Beige" };
+            var silver = new Color { Name = "Silver" };
+            var gold = new Color { Name = "Gold" };
+            var multi = new Color { Name = "Multi" };
+
+            await context.AddRangeAsync(black, white, grey, red, blue, green, pink, purple, orange, yellow, brown, beige, silver, gold, multi);
+            await context.SaveChangesAsync();
+
+            var xs = new Size { Name = "XS" };
+            var s = new Size { Name = "S" };
+            var m = new Size { Name = "M" };
+            var l = new Size { Name = "L" };
+            var xl = new Size { Name = "XL" };
+
+            await context.AddRangeAsync(xs, s, m, l, xl);
+            await context.SaveChangesAsync();
+
             var p1 = new Product
             {
                 Name = "Little black dress",
                 Category = dress,
                 ImagePath = ".jpg",
-                Color = Color.Black,
+                Color = black,
                 Price = 399.90m,
-                Size = Size.M,
+                Size = m,
                 Stock = 2,
                 PublishDate = DateTime.Today
             };
@@ -34,9 +63,9 @@ namespace NalaApplication.Data
                 Name = "Little yellow dress",
                 Category = dress,
                 ImagePath = ".jpg",
-                Color = Color.Yellow,
+                Color = yellow,
                 Price = 399.90m,
-                Size = Size.M,
+                Size = m,
                 Stock = 1,
                 PublishDate = DateTime.Today
             };
@@ -46,9 +75,9 @@ namespace NalaApplication.Data
                 Name = "Black top",
                 Category = tops,
                 ImagePath = ".jpg",
-                Color = Color.Black,
+                Color = black,
                 Price = 299m,
-                Size = Size.S,
+                Size = s,
                 Stock = 1,
                 PublishDate = DateTime.Today
             };
@@ -58,9 +87,9 @@ namespace NalaApplication.Data
                 Name = "Red top",
                 Category = tops,
                 ImagePath = ".jpg",
-                Color = Color.Red,
+                Color = red,
                 Price = 299m,
-                Size = Size.L,
+                Size = l,
                 Stock = 1,
                 PublishDate = DateTime.Today
             };
@@ -70,9 +99,9 @@ namespace NalaApplication.Data
                 Name = "Black skirt",
                 Category = skirts,
                 ImagePath = ".jpg",
-                Color = Color.Black,
+                Color = black,
                 Price = 199m,
-                Size = Size.M,
+                Size = m,
                 Stock = 1,
                 PublishDate = DateTime.Today
             };

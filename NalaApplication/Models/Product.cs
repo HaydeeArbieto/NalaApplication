@@ -15,27 +15,22 @@ namespace NalaApplication.Models
 
         public decimal Price { get; set; }
 
-        public Size Size { get; set; }
-
-        public Color Color { get; set; }
+        public string Description { get; set; }
 
         public DateTime PublishDate { get; set; }
 
         public string ImagePath { get; set; }
 
-        public int CategoryId { get; set; }
+        public int SizeId { get; set; }
+        public Size Size { get; set; }
 
+        public int ColorId { get; set; }
+        public Color Color { get; set; }
+
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
     }
 
-    public enum Color
-    {
-        None, Black, White, Red, Green, Orange, Yellow, Blue, RoyalBlue, DarkRed, Grey
-    }
-
-    public enum Size
-    {
-        XXS, XS, S, M, L, XL, XXL
-    }
+  
 }
