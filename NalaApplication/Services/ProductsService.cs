@@ -32,7 +32,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductsNotFound });
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectsNotFound });
             }
           
         }
@@ -45,7 +45,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ProductNotNull });
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
             }
         }
 
@@ -78,7 +78,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductNotNull });
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
             }
         }
 
@@ -93,7 +93,7 @@ namespace NalaApplication.Services
                 }
                 else
                 {
-                    return  new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ProductNotFound });
+                    return  new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
                 }
             }
 

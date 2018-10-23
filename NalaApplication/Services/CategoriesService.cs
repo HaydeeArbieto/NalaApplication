@@ -27,7 +27,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.CategoriesNotFound });
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectsNotFound });
             }
         }
 
@@ -42,7 +42,7 @@ namespace NalaApplication.Services
                 }
                 else
                 {
-                    return new NotFoundObjectResult(new { ErrorMessages = ErrorMessages.CategoriesNotFound });
+                    return new NotFoundObjectResult(new { ErrorMessages = ErrorMessages.ObjectNotFound });
                 }
             }
             else
@@ -57,7 +57,7 @@ namespace NalaApplication.Services
             {
                 if(await CheckIfCategoryExistsAsync(name))
                 {
-                    return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryAlreadyExists });
+                    return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectAlreadyExists });
                 }
                 else
                 {
@@ -67,7 +67,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryNotFound });
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
             }
         }
 
@@ -111,7 +111,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryNotFound });
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
             }
 
         }
@@ -125,7 +125,7 @@ namespace NalaApplication.Services
             }
             else
             {
-                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.CategoryNotFound });
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
             }
 
         }

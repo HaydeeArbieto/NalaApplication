@@ -30,5 +30,12 @@ namespace NalaApplication.Repositories
             return await GetOrdersAsync();
 
         }
+
+        public async Task<List<Order>> UpdateOrderAsync(Order order)
+        {
+            _context.Update(order);
+            await _context.SaveChangesAsync();
+            return await GetOrdersAsync();
+        }
     }
 }
