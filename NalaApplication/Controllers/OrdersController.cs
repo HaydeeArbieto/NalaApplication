@@ -9,7 +9,7 @@ namespace NalaApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrdersController : Controller
+    public class OrdersController : ControllerBase
     {
         // GET: api/Orders
         [HttpGet]

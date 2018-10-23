@@ -38,7 +38,7 @@ namespace NalaApplication
             services.AddTransient<CategoriesRepository>();
             services.AddTransient<CategoriesService>();
             services.AddTransient<OrdersService>();
-            services.AddTransient<OrdersRepository();
+            services.AddTransient<OrdersRepository>();
             services.AddSpaStaticFiles(configuration =>
 			{
 				configuration.RootPath = "ClientApp/dist";

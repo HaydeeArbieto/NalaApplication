@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace NalaApplication.Controllers
 {
 	[Route("api/[controller]")]
-	public class SampleDataController : Controller
-	{
+	public class SampleDataController : ControllerBase
+    {
 		private static string[] Summaries = new[]
 		{
 			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltring", "Scorching"

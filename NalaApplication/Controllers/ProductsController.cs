@@ -12,7 +12,7 @@ namespace NalaApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : Controller
+    public class ProductsController : ControllerBase
     {
         private ProductsService _serv;
         public ProductsController(ProductsService serv)

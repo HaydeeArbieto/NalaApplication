@@ -11,7 +11,7 @@ namespace NalaApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : Controller
+    public class CategoriesController : ControllerBase
     {
         private readonly CategoriesService _service;
 
