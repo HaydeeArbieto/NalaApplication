@@ -20,9 +20,12 @@ import { CartComponent } from './cart/cart.component';
 
 import { AboutComponent } from './footer/about/about.component';
 import { FaqComponent } from './footer/quick-links/faq/faq.component';
+import { ReturnsComponent } from './footer/customer-care/returns/returns.component';
+import { ShippingComponent } from './footer/customer-care/shipping-delivery/shipping-delivery.component';
 import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide.component';
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +42,12 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
     CartComponent,
     AboutComponent,
     FaqComponent,
+    ReturnsComponent,
+    ShippingComponent,
     SizeGuideComponent,
     TermsConditionsComponent,
-    ContactComponent
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -66,6 +72,8 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
       { path: 'cart', component: CartComponent },
       { path: 'about', component: AboutComponent },
       { path: 'order', component: FaqComponent },
+      { path: 'returns', component: ReturnsComponent },
+      { path: 'shipping', component: ShippingComponent },
       { path: 'size-guide', component: SizeGuideComponent },
       { path: 'terms-conditions', component: TermsConditionsComponent },
       { path: 'contact', component: ContactComponent },

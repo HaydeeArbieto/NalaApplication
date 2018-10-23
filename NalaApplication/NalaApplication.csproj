@@ -32,8 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\footer\customer-care\returns\" />
-    <Folder Include="ClientApp\src\app\footer\customer-care\shipping-delivery\" />
     <Folder Include="ClientApp\src\app\footer\follow\snapchat\" />
   </ItemGroup>
 

@@ -37,7 +37,7 @@ footer h3 {
   display: inline-block;
 }
 #currency-select option {
-  color: rgba(213, 183, 114, 1);
+  color: #9a9a9a;
 }
 #navbar-upp {
   padding: 2px;
@@ -86,4 +86,7 @@ footer h3 {
 }
 #facebook-img {
   
+}
+.container {
+  padding-right: 0;
 }
