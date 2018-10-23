@@ -17,6 +17,8 @@ namespace NalaApplication.Models
 
         public DateTime DeliveryDate { get; set; }
 
+        public decimal TotalPrice { get; set; }
+
         public bool Delivered { get; set; }
 
         public bool Paid { get; set; }
