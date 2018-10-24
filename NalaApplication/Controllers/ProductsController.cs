@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NalaApplication.Constants;
 using NalaApplication.Models;
 using NalaApplication.Repositories;
 using NalaApplication.Services;
@@ -23,7 +24,6 @@ namespace NalaApplication.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> Get()
         {
-            
             return await _serv.GetProductsAsync();
         }
 
@@ -38,7 +38,14 @@ namespace NalaApplication.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Product>>> Post([FromBody] Product product)
         {
-            return await _serv.AddProductAsync(product);
+            if (ModelState.IsValid)
+            {
+                return await _serv.AddProductAsync(product);
+            }
+            else
+            {
+                return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.InputIsNotValid});
+            }
         }
 
         // PUT: api/Products/5
@@ -47,7 +54,7 @@ namespace NalaApplication.Controllers
         {
             if(ModelState.IsValid)
             {
-                return await _serv.UpdateProductAsync(product);
+                return await _serv.UpdateProductAsync(id, product);
             }
 
             return NotFound();

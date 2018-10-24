@@ -1,25 +1,20 @@
 ﻿using NalaApplication.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace NalaApplication.Data
+namespace XUnitTestProject.MockData
 {
-    public class DataInitializer
+    class Mockdata
     {
-        //populates the in memorydatabase with items
-       
-        public static async Task Initializer(AppDbContext context)
+        public static List<Product> Products = new List<Product>();
+
+        public static void Initialize()
         {
             var skirts = new Category { Name = "Skirts" };
             var dress = new Category { Name = "Dresses" };
             var tops = new Category { Name = "Tops" };
             var pants = new Category { Name = "Pants" };
-
-            await context.AddRangeAsync(skirts, dress, tops, pants);
-            await context.SaveChangesAsync();
-
 
             var black = new Color { Name = "Black" };
             var white = new Color { Name = "White" };
@@ -37,20 +32,16 @@ namespace NalaApplication.Data
             var gold = new Color { Name = "Gold" };
             var multi = new Color { Name = "Multi" };
 
-            await context.AddRangeAsync(black, white, grey, red, blue, green, pink, purple, orange, yellow, brown, beige, silver, gold, multi);
-            await context.SaveChangesAsync();
-
             var xs = new Size { Name = "XS" };
             var s = new Size { Name = "S" };
             var m = new Size { Name = "M" };
             var l = new Size { Name = "L" };
             var xl = new Size { Name = "XL" };
 
-            await context.AddRangeAsync(xs, s, m, l, xl);
-            await context.SaveChangesAsync();
 
             var p1 = new Product
             {
+                Id = 1,
                 Name = "Little black dress",
                 Category = dress,
                 ImagePath = ".jpg",
@@ -62,6 +53,7 @@ namespace NalaApplication.Data
             };
             var p2 = new Product
             {
+                Id = 2,
                 Name = "Little yellow dress",
                 Category = dress,
                 ImagePath = ".jpg",
@@ -74,6 +66,7 @@ namespace NalaApplication.Data
 
             var p3 = new Product
             {
+                Id = 3,
                 Name = "Black top",
                 Category = tops,
                 ImagePath = ".jpg",
@@ -86,6 +79,7 @@ namespace NalaApplication.Data
 
             var p4 = new Product
             {
+                Id = 4,
                 Name = "Red top",
                 Category = tops,
                 ImagePath = ".jpg",
@@ -98,6 +92,7 @@ namespace NalaApplication.Data
 
             var p5 = new Product
             {
+                Id = 5,
                 Name = "Black skirt",
                 Category = skirts,
                 ImagePath = ".jpg",
@@ -107,9 +102,16 @@ namespace NalaApplication.Data
                 Stock = 1,
                 PublishDate = DateTime.Today
             };
-            await context.AddRangeAsync(p1, p2, p3, p4, p5);
-            await context.SaveChangesAsync();
-      
+            Products.Add(p1);
+            Products.Add(p2);
+            Products.Add(p3);
+            Products.Add(p4);
+            Products.Add(p5);
+        }
+        public static List<Product> GetProducts()
+        {
+          
+            return Products;
         }
     }
 }

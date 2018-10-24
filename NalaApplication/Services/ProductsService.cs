@@ -70,16 +70,46 @@ namespace NalaApplication.Services
            
         }
 
-        public async Task<ActionResult<List<Product>>> UpdateProductAsync(Product product)
+        public async Task<ActionResult<List<Product>>> UpdateProductAsync(int id, Product product)
         {
-            if(product != null)
+            if(id != 0)
             {
-                return await _rep.UpdateProductAsync(product);
+                var oldProduct = await _rep.GetProductByIdAsync(id);
+                if(oldProduct != null)
+                {
+                    Product updatedProduct = UpdateProductsProperties(oldProduct, product);
+                  
+
+                    return await _rep.UpdateProductAsync(updatedProduct);
+                }
+                else
+                {
+                    return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
+                }
+               
             }
             else
             {
-                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound });
+                return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.IdCantBeZero });
             }
+        }
+
+        public Product UpdateProductsProperties(Product oldProduct, Product product)
+        {
+            var oldProps = oldProduct.GetType().GetProperties().ToList();
+            var newProps = product.GetType().GetProperties().ToList();
+
+            for (int i = 1; i < newProps.Count; i++)
+            {
+                var oldValue = oldProps[i].GetValue(oldProduct);
+                var newValue = newProps[i].GetValue(product);
+
+                if(newValue != null && newValue != oldValue)
+                {
+                    oldProps[i].SetValue(oldProduct, newValue);
+                }
+            }
+            return oldProduct;
         }
 
         public async Task<ActionResult<List<Product>>> RemoveProductAsync(int id)
