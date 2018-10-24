@@ -1,4 +1,5 @@
 <div id="app-main-div">
+  <div>
   <nav id="navbar-upp" class="navbar navbar-expand-lg navbar-light bg-light">
     <div id="div-navbar1" class='container'>
       <ul class="nav navbar-nav">
@@ -41,16 +42,16 @@
     <div id="div-navbar2" class='container'>
       <ul class="nav navbar-nav">
         <li class='nav-item'>
-          <a class='nav-link' routerLink="/">SHOP</a>
+          <a class='nav-link' routerLink="/home">SHOP</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' routerLink="/">LOOKBOK</a>
+          <a class='nav-link' routerLink="/lookbok">LOOKBOK</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' routerLink="/">CONTACT</a>
+          <a class='nav-link' routerLink="/contact">CONTACT</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' routerLink="/"><img id="cart" src="./images/cart2.jpg"></a>
+          <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
         </li>
       </ul>
     </div>
@@ -58,6 +59,7 @@
   <div class="inner-outlet">
     <router-outlet></router-outlet>
   </div>
+ </div>
   <footer id="main-footer">
     <div id="container-menu-footer" class="container">
       <div class="row">

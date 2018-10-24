@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 //import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CartComponent } from './cart/cart.component';
+
+import { LookbokComponent } from './lookbok/lookbok.component';
 
 import { MyAccountComponent } from './my-account/my-account.component';
 import { DashboardComponent } from './my-account/dashboard/dashboard.component';
@@ -15,8 +19,7 @@ import { AddressesComponent } from './my-account/addresses/addresses.component';
 import { PaymentsMethodsComponent } from './my-account/payments-methods/payments-methods.component';
 import { AccountDetailsComponent } from './my-account/account-details/account-details.component';
 
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component';
+
 
 import { AboutComponent } from './footer/about/about.component';
 import { FaqComponent } from './footer/quick-links/faq/faq.component';
@@ -32,14 +35,15 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
     AppComponent,
     HomeComponent,
     MyAccountComponent,
+    CheckoutComponent,
+    CartComponent,
+    LookbokComponent,
     DashboardComponent,
     OrdersComponent,
     DownloadsComponent,
     AddressesComponent,
     PaymentsMethodsComponent,
     AccountDetailsComponent,
-    CheckoutComponent,
-    CartComponent,
     AboutComponent,
     FaqComponent,
     ReturnsComponent,
@@ -70,6 +74,7 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
       },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'lookbok', component: LookbokComponent },
       { path: 'about', component: AboutComponent },
       { path: 'order', component: FaqComponent },
       { path: 'returns', component: ReturnsComponent },

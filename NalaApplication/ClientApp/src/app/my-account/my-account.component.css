@@ -13,9 +13,6 @@
   background-color: white;
   border-color: #080808;
 }
-a {
-  color: red;
-}
 #router-div {
   background-color: antiquewhite;
 }
@@ -26,10 +23,11 @@ a {
   height: 50vh;
   margin: 1%, 1%;
 }*/
-  #account-div {
-    width: 30%;
-  }
-  #router-div {
-    float: right;
-    width: 70%;
-  }
+ #account-div {
+   width: 30%;
+   
+ }
+ #router-div {
+   float: right;
+   width: 70%;
+ }
