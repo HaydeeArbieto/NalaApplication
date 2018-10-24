@@ -1,0 +1,17 @@
+h4 {
+  color: rgb(255,165,0);
+}
+#main-checkout {
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+#coupon-div {
+  margin-bottom: 20px;
+  background-color: lightgray;
+  height: 100px;
+  width: 1300px;
+}
+#have-a-coupon {
+  font-weight: bold;
+}

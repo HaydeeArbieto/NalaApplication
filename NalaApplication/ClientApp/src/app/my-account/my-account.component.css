@@ -1,0 +1,18 @@
+#account-div {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.navbar-fixed-left {
+   width: 200px;
+ }
+.navbar-fixed-left .navbar-nav > li {
+  float: none;
+  width: 139px;
+}
+.navbar-inverse {
+  background-color: white;
+  border-color: #080808;
+}
+a {
+  color: red;
+}
