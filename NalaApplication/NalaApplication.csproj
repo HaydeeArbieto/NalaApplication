@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\footer\follow\snapchat\" />
+    <Folder Include="ClientApp\src\images\lookbook\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
