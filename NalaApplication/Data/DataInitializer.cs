@@ -53,7 +53,7 @@ namespace NalaApplication.Data
             {
                 Name = "Little black dress",
                 Category = dress,
-                ImagePath = ".jpg",
+                ImagePath = "C:\\Users\\mkallstr\\source\\repos\\NalaApplication\\NalaApplication\\ClientApp\\src\\images\\Nala-106-av-132-750x1125.jpg",
                 Color = black,
                 Price = 399.90m,
                 Size = m,

@@ -30,16 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\favicon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\favicon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\app\footer\follow\snapchat\" />
-    <Folder Include="ClientApp\src\images\lookbook\" />
+    <Folder Include="ClientApp\src\app\data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
