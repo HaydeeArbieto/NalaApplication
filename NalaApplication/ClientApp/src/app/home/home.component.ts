@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../services/products.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(private http: HttpClient) { }
-  product = {};
-
+  constructor(private serv: ProductsService) { }
+   product = this.serv.getProduct();
  
-
-  ngOnInit() {
-    //this.http.get('/api/products/1').subscribe(values => {
-    //  this.product = values;
-    //});
-  }
 }
+
+console.log(this.product)
