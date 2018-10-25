@@ -53,14 +53,14 @@ namespace NalaApplication.Services
         {
             if(id != 0)
             {
-                var product = await GetProductByIdAsync(id);
+                var product = await _rep.GetProductByIdAsync(id);
                 if (product != null)
                 {
-                    return await _rep.GetProductByIdAsync(id);
+                    return product;
                 }
                 else
                 {
-                    return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.IdCantBeZero});
+                    return new NotFoundObjectResult(new { ErrorMessage = ErrorMessages.ObjectNotFound});
                 } 
             }
             else
