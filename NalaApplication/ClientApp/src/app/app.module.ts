@@ -29,6 +29,7 @@ import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
 
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -51,11 +52,12 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
     SizeGuideComponent,
     TermsConditionsComponent,
     ContactComponent,
+  
     
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule,
+    HttpClientModule, 
    
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -84,7 +86,7 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
       { path: 'contact', component: ContactComponent },
     ])
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 
