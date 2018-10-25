@@ -1,0 +1,111 @@
+@media (max-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+  .body-content {
+    padding-top: 50px;
+  }
+}
+#logo-image {
+  margin: 50px;
+  width: 700px;
+  border-bottom: 20px solid;
+  border-color: rgb(255,165,0);
+  /* Align image center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*#menu-information-container li {
+  list-style-type: none;
+}*/
+#main-footer {
+  margin: 50px;
+  border-top: 20px solid;
+  border-color: rgb(255,165,0);
+}
+/*.col-sm-2 li {
+  list-style-type: none;
+}*/
+footer h3 {
+  color: #9a9a9a;
+}
+
+#div-navbar1 a, #label-currency {
+  font-size: 11px;
+  font-weight: bold;
+  color: #9a9a9a;
+}
+
+#div-navbar1 {
+  width: auto;
+}
+
+#navbar2 ul {
+  display: inline-block;
+}
+
+#currency-select option {
+  color: #9a9a9a;
+}
+
+#navbar-upp {
+  padding: 2px;
+}
+
+#div-navbar1 {
+  margin-left: initial;
+}
+
+#div-navbar2 a {
+  color: #9a9a9a;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#about, #returns, #size-guide, #shiping-delivery, #instagram, #snapchat, #faq-div a {
+  color: #9a9a9a;
+}
+
+#cart {
+  width: 23px;
+  height: 23px;
+}
+
+#li-currency {
+  margin-left: 1114px;
+  margin-top: 15px;
+}
+
+.search-container {
+  margin-top: 25px;
+}
+
+#div-navbar2 {
+  margin-right: inherit;
+}
+
+#copyright {
+  padding-bottom: 20px;
+}
+
+  #copyright p {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
+#facebook-img, #instagram-img, #snapchat-img {
+  width: 30px;
+  height: 30px;
+}
+
+#links-div {
+  padding-left: 800px;
+  padding-bottom: 30px;
+}
+
+#facebook-img {
+}
+
+.container {
+  padding-right: 0;
+}
