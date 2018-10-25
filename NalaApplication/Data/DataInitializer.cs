@@ -53,7 +53,7 @@ namespace NalaApplication.Data
             {
                 Name = "Little black dress",
                 Category = dress,
-                ImagePath = "C:\\Users\\mkallstr\\source\\repos\\NalaApplication\\NalaApplication\\ClientApp\\src\\images\\Nala-106-av-132-750x1125.jpg",
+                ImagePath = "\\images\\Nala-11-av-132-750x1125.jpg",
                 Color = black,
                 Price = 399.90m,
                 Size = m,
@@ -64,7 +64,7 @@ namespace NalaApplication.Data
             {
                 Name = "Little yellow dress",
                 Category = dress,
-                ImagePath = ".jpg",
+                ImagePath = "\\images\\Nala-106-av-132-750x1125.jpg",
                 Color = yellow,
                 Price = 399.90m,
                 Size = m,
@@ -76,7 +76,7 @@ namespace NalaApplication.Data
             {
                 Name = "Black top",
                 Category = tops,
-                ImagePath = ".jpg",
+                ImagePath = "\\images\\Nala-17-av-132-750x1125.jpg",
                 Color = black,
                 Price = 299m,
                 Size = s,
@@ -88,7 +88,7 @@ namespace NalaApplication.Data
             {
                 Name = "Red top",
                 Category = tops,
-                ImagePath = ".jpg",
+                ImagePath = "\\images\\Nala-28-av-132-750x1125.jpg",
                 Color = red,
                 Price = 299m,
                 Size = l,
@@ -100,7 +100,7 @@ namespace NalaApplication.Data
             {
                 Name = "Black skirt",
                 Category = skirts,
-                ImagePath = ".jpg",
+                ImagePath = "\\images\\Nala-31-av-132-750x1125.jpg",
                 Color = black,
                 Price = 199m,
                 Size = m,
