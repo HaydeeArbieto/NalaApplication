@@ -13,7 +13,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class HomeComponent {
   constructor(private serv: ProductsService) { }
 
-  products = Array<Product>();
+  products:any = [];
 
 
   ngOnInit() {

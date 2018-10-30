@@ -40,6 +40,7 @@ import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
 
+import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ProductsService } from './services/products.service';
 
 
@@ -78,6 +79,7 @@ import { ProductsService } from './services/products.service';
 
     TermsConditionsComponent,
     ContactComponent,
+    AdminMenuComponent,
     
   ],
   imports: [
