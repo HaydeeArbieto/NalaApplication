@@ -13,9 +13,9 @@
   margin-left: 400px;
 }
 #sorting option {
-  color: rgba(213, 183, 114, 1);
+  color: #9a9a9a;
 }
-  #sorting option:first-child { /*??*/
+/* #sorting option:first-child { /*??
   color: rgba(213, 183, 114, 1);
   font-weight: bold;
-}
+}*/

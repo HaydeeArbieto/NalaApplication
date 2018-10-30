@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-core_1.Injectable();
+require("rxjs/add/operator/map");
+//@Injectable()
 var ProductsService = /** @class */ (function () {
     function ProductsService() {
     }

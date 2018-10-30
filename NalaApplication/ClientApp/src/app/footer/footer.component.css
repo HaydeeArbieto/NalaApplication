@@ -1,3 +1,27 @@
-#footer-div {
- 
+#facebook-img, #instagram-img, #snapchat-img {
+  width: 30px;
+  height: 30px;
+}
+#facebook-img {
+}
+#main-footer {
+  margin: 50px;
+  border-top: 20px solid;
+  border-color: rgb(255,165,0);
+}
+#links-div {
+  padding-left: 800px;
+  padding-bottom: 30px;
+}
+footer h3 {
+  color: #9a9a9a;
+}
+#about, #returns, #shipping-delivery, #size-guide, #faq-div a {
+  color: #9a9a9a;
+}
+#links-div a {
+  padding-left: 20px;
+}
+#about:hover, #returns:hover, #shipping-delivery:hover, #size-guide:hover, #faq-div a:hover {
+  color: rgb(255,165,0);
 }

@@ -1,13 +1,13 @@
 h3, h4, h5, p {
-  color: #927c46;
+  color: #9a9a9a;
 }
 #last-message {
   font-style: italic;
 }
 #main-container {
   padding-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 400px;
+  padding-right: 400px;
   padding-bottom: 50px;
 }
 h3, h4, h5 {

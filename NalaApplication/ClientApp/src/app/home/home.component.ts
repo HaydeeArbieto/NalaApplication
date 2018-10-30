@@ -7,9 +7,8 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(private serv: ProductsService) { }
-   product = this.serv.getProduct();
- 
+  //constructor(private serv: ProductsService) { }
+   //product = this.serv.getProduct();
 }
 
-console.log(this.product)
+//console.log(this.product)

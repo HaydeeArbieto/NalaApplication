@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  //selector: 'xxx',
   templateUrl: './faq.order.component.html',
-
+  styleUrls: ['./faq.order.component.css'],
 })
-export class FaqOrderComponent {
-}
+export class FaqOrderComponent { }

@@ -1,93 +1,39 @@
-<div id="app-main-div">
-  <div>
-    <nav id="navbar-upp" class="navbar navbar-expand-lg navbar-light bg-light">
-      <div id="div-navbar1" class='container'>
-        <ul class="nav navbar-nav">
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/home">HOME</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/my-account">MY ACCOUNT</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/checkout">CHECKOUT</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
-          </li>
-          <li id="li-currency" class='nav-item'>
-            <label id="label-currency" class="col-sm-24 control-label" for="currency1">CHANGE CURRENCY:</label>
-            <div id="currency-div" class="col-sm-10">
-              <select class="form-control" id="currency-select">
-                <option selected>USD, $</option>
-                <option value="1">EUR, €</option>
-                <option value="2">SEK, Kr</option>
-                <option value="3">GPR, €</option>
-              </select>
-            </div>
-          </li>
-          <li class='nav-item'>
-            <div class="search-container">
-              <form class="example" style="margin:auto;max-width:300px">
-                <input id="imput-search" type="text" placeholder="Search here" name="search">
-                <button id="button-search" type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <img id="logo-image" alt="Nala's Logo" src="./images/nala-logo.png">
-    <nav id="navbar2" class="navbar navbar-expand-lg navbar-light bg-light">
-      <div id="div-navbar2" class='container'>
-        <ul class="nav navbar-nav">
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/home">SHOP</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/lookbok">LOOKBOK</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/contact">CONTACT</a>
-          </li>
-          <li class='nav-item'>
-            <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="inner-outlet">
-      <router-outlet></router-outlet>
+<div>
+  <nav id="navbar-upp" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div id="div-navbar1" class='container'>
+      <ul class="nav navbar-nav">
+        <li class='nav-item'>
+          <a class='nav-link' routerLink="/home">HOME</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' routerLink="/my-account">MY ACCOUNT</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' routerLink="/checkout">CHECKOUT</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
+        </li>
+        <li id="li-currency" class='nav-item'>
+          <label id="label-currency" class="col-sm-24 control-label" for="currency1">CHANGE CURRENCY:</label>
+          <div id="currency-div" class="col-sm-10">
+            <select class="form-control" id="currency-select">
+              <option selected>USD, $</option>
+              <option value="1">EUR, €</option>
+              <option value="2">SEK, Kr</option>
+              <option value="3">GPR, €</option>
+            </select>
+          </div>
+        </li>
+        <li class='nav-item'>
+          <div class="search-container">
+            <form class="example" style="margin:auto;max-width:300px">
+              <input id="imput-search" type="text" placeholder="Search here" name="search">
+              <button id="button-search" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </li>
+      </ul>
     </div>
-  </div>
-  <footer id="main-footer">
-    <div id="container-menu-footer" class="container">
-      <div class="row">
-        <div class="col-sm-2">
-          <h3>Information</h3>
-          <p><a id="about" class='nav-link' routerLink="/about">About us</a></p>
-        </div>
-        <div class="col-sm-3">
-          <h3>Customer Care</h3>
-          <p><a id="returns" class='nav-link' routerLink="/returns">Returns</a></p>
-          <p><a id="shipping-delivery" class='nav-link' routerLink="/shipping">Shipping & Delivery</a></p>
-          <p><a id="size-guide" class='nav-link' routerLink="/size-guide">Size Guide</a></p>
-        </div>
-        <div id="faq-div" class="col-sm-2">
-          <h3>Quick Links</h3>
-          <p> <a class='nav-link' routerLink="/order">FAQ</a></p>
-          <p> <a class='nav-link' routerLink="/terms-conditions">Terms & Conditions</a></p>
-          <p> <a class='nav-link' routerLink="/contact">Contact us</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div id="links-div">
-    <a href="https://www.facebook.com/nalase-866007096832699/"> <img id="facebook-img" src="./images/facebook2.png"></a>
-    <a href="https://www.instagram.com/nala.se/"> <img id="instagram-img" src="./images/instagram.jpg"></a>
-    <a href="https://www.instagram.com/nala.se/"> <img id="snapchat-img" src="./images/snapchat.png"></a>
-  </div>
-  <div id="copyright">
-    <p>Copyright © 2018 NALA</p>
-  </div>
+  </nav>
 </div>
