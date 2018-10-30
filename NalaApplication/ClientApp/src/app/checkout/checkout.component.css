@@ -16,14 +16,17 @@ h4 {
   font-weight: bold;
 }
 #pay-div {
-  border: dotted;
+  border: groove;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 #klarna-img {
   width: 80px;
   padding-left: 6px;
 }
 #klarna-card-img, #mastercard-img {
-  width: 50px;
+  width: 45px;
 }
 #place-holder-btn {
   margin-top: 10px;
@@ -34,4 +37,25 @@ h4 {
 }
 #have-a-coupon {
   padding: 40px;
+}
+.btn-primary {
+  background-color: rgb(255,165,0);
+}
+#coupon-input {
+  width: 40%;
+}
+.form-group {
+  width: 50%;
+}
+.table th {
+  font-size: 16px;
+}
+#betala-select {
+  width: 45%;
+}
+#show-invoice {
+  padding-left: 17px;
+}
+#terms-of-invoice {
+  color: #9a9a9a;
 }

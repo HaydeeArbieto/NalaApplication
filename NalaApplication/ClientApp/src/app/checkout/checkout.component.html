@@ -1,21 +1,33 @@
 <div id="main-checkout">
   <div id="coupon-div">
-    <p id="have-a-coupon">Have a coupon?&ensp;<a href="checkout" ng-click="showme=true">Click here to enter your code</a></p>
+    <p id="have-a-coupon">Have a coupon?&ensp;
+       <button type="button" class="btn btn-primary" (click)="toggle()" id="bt">
+               {{buttonName}}
+       </button>
+    </p>
   </div>
-  <div ng-show="showme" class="container">
-    <form>
-      <div class="form-group">
-
-      </div>
-    </form>
-    <!-->p ng-hide="showme">It will appear here!</p-->
-    <input type="text" class="form-control" placeholder="coupon Code">
-    <input type="text" class="form-control" placeholder="XXXX-XX-XX">
-    <button type="button" class="btn btn-primary">Fetch</button>
-    <input placeholder="YYMMDD-XXXX" />
-  </div>
+  <ng-container *ngIf="show">
   <div class="container">
     <form>
+      <div id="xxx" class="col-md-6 form-line">
+        <div class="form-group">
+          <input id="coupon-input" type="text" class="form-control" placeholder="Coupon Code">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary">APPLY COUPON</button>
+        </div>
+        </div>
+    </form>
+  </div>
+  </ng-container>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="YYMMDD-XXXX">
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary">Fetch</button>
+      </div>
       <h4>BILLING DETAILS</h4>
       <div class="form-group">
         <input type="text" class="form-control" id="first-name" placeholder="First name">
@@ -27,7 +39,7 @@
         <input type="text" class="form-control" id="company-name" placeholder="Company name">
       </div>
       <div class="form-group">
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select class="form-control form-control-sm" id="inlineFormCustomSelect">
           <option selected>Country</option>
           <option value="1">Swaziland</option>
           <option value="2">Sweden</option>
@@ -45,6 +57,15 @@
         </div>
         <div class="form-group">
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Post nummer??">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="city-input" placeholder="City">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="telefon-input" placeholder="Telefon Nr.">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email">
         </div>
       </div>
       <div class="container">
@@ -82,8 +103,16 @@
           <label class="form-check-label" for="exampleRadios1">
             Klarna Invoice <img id="klarna-img" src="../images/klarna2.png" />
           </label>
-          <p>Vilkor for faktura</p>
-          <p>Payment plan*</p>
+          <div id="show-invoice">
+            <p id="terms-of-invoice">Terms of invoice</p>
+            <p>Payment plan*</p>
+            <div class="form-group">
+              <select class="form-control form-control-sm" id="betala-select">
+                <option selected>Betala om 14 dagar</option>
+                <option value="1">Betala om 30 dagar</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
@@ -92,7 +121,7 @@
           </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
           <label class="form-check-label" for="exampleRadios3">
             Credit Card (Stripe) <img id="klarna-card-img" src="../images/visa.png" />
             <img id="mastercard-img" src="../images/mastercard.png" />
@@ -100,17 +129,19 @@
           </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
           <label class="form-check-label" for="exampleRadios3">
             PayPal
           </label>
         </div>
+        <br/>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
           <label class="form-check-label" for="defaultCheck1">
             I’ve read and accept the terms & conditions *
           </label>
         </div>
+        <br/>
         <button id="place-holder-btn" type="button" class="btn btn-warning">PLACE ORDER</button>
       </div>
     </form>

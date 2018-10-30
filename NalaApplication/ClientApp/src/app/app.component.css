@@ -18,7 +18,7 @@
   display: inline-block;
 }
 #div-navbar2 a {
-  color: #9a9a9a;
+  color: #9a9a9a; /*main-color-to- all*/
   font-weight: bold;
   font-size: 15px;
 }
