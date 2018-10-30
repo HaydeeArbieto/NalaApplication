@@ -1,13 +1,21 @@
 <div id="main-checkout">
   <div id="coupon-div">
-    <p id="have-a-coupon">Have a coupon?<a>Click here to enter a code...</a></p>  
+    <p id="have-a-coupon">Have a coupon?&ensp;<a href="checkout" ng-click="showme=true">Click here to enter your code</a></p>
+  </div>
+  <div ng-show="showme" class="container">
+    <form>
+      <div class="form-group">
+
+      </div>
+    </form>
+    <!-->p ng-hide="showme">It will appear here!</p-->
+    <input type="text" class="form-control" placeholder="coupon Code">
+    <input type="text" class="form-control" placeholder="XXXX-XX-XX">
+    <button type="button" class="btn btn-primary">Fetch</button>
+    <input placeholder="YYMMDD-XXXX" />
   </div>
   <div class="container">
     <form>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="XXXX-XX-XX">
-      </div>
-      <button type="button" class="btn btn-primary">Fetch</button>
       <h4>BILLING DETAILS</h4>
       <div class="form-group">
         <input type="text" class="form-control" id="first-name" placeholder="First name">
@@ -72,7 +80,7 @@
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
           <label class="form-check-label" for="exampleRadios1">
-            Klarna Invoice <img id="klarna-img" src="../images/klarna2.png"/>
+            Klarna Invoice <img id="klarna-img" src="../images/klarna2.png" />
           </label>
           <p>Vilkor for faktura</p>
           <p>Payment plan*</p>
