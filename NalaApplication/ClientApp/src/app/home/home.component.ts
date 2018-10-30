@@ -1,14 +1,24 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../services/products.service';
+import { Product } from '../models/models';
+import { Observable } from 'rxjs/Observable';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+
 })
 export class HomeComponent {
-  //constructor(private serv: ProductsService) { }
-   //product = this.serv.getProduct();
-}
+  constructor(private serv: ProductsService) { }
 
-//console.log(this.product)
+  products = Array<Product>();
+
+
+  ngOnInit() {
+    return this.serv.getProducts().map(response => response)
+      .subscribe(result => this.products = result);
+  }
+
+}

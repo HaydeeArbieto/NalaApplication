@@ -24,7 +24,7 @@ namespace NalaApplication.Controllers
         }
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> Get()
+        public async Task<ActionResult> Get()
         {
             return await _serv.GetProductsAsync();
         }

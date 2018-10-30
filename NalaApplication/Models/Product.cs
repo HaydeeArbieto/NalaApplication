@@ -23,13 +23,11 @@ namespace NalaApplication.Models
         public string ImagePath { get; set; }
 
         public int SizeId { get; set; }
-        public Size Size { get; set; }
-
+        public virtual Size Size { get; set; }
         public int ColorId { get; set; }
-        public Color Color { get; set; }
-
+        public virtual Color Color { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
     }
 
