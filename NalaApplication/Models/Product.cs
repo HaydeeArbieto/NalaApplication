@@ -21,7 +21,7 @@ namespace NalaApplication.Models
         public DateTime PublishDate { get; set; }
 
         public string ImagePath { get; set; }
-
+        public int Rating { get; set; }
         public int SizeId { get; set; }
         public virtual Size Size { get; set; }
         public int ColorId { get; set; }
@@ -30,6 +30,8 @@ namespace NalaApplication.Models
         public virtual Category Category { get; set; }
 
     }
+
+   
 
   
 }

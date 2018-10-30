@@ -8,6 +8,7 @@ export class Product {
   ImagePath: string;
   Color:string;
   Size: string;
+  Raiting: number;
   Category: string;
    
 }
