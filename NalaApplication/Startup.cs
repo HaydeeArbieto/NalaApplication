@@ -26,7 +26,13 @@ namespace NalaApplication
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+          
             services.AddDistributedMemoryCache();
             services.AddSession();
             // In production, the Angular files will be served from this directory
@@ -43,7 +49,8 @@ namespace NalaApplication
 			{
 				configuration.RootPath = "ClientApp/dist";
 			});
-           
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
         }
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +69,7 @@ namespace NalaApplication
             app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseSpaStaticFiles();
+            app.UseCors("MyPolicy");
             app.UseMvc(routes =>
 			{
 				routes.MapRoute(
