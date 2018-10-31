@@ -40,12 +40,15 @@ import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
 
-import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ProductsService } from './services/products.service';
+
+import { AdminModul } from './admin/admin.modul';
+import { routing } from './admin/admin.routing';
 
 
 @NgModule({
   declarations: [
+  
     AppComponent,
     NavMenuComponent,
     HomeComponent,
@@ -79,12 +82,11 @@ import { ProductsService } from './services/products.service';
 
     TermsConditionsComponent,
     ContactComponent,
-    AdminMenuComponent,
     
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule, 
+    HttpClientModule, routing, AdminModul,
    
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -122,6 +124,7 @@ import { ProductsService } from './services/products.service';
           { path: 'contact', component: ContactComponent },
         ]
       },
+    
     ])
   ],
   providers: [ProductsService],

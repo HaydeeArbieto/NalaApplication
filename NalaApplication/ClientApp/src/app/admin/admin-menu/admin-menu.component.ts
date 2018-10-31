@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   templateUrl: './admin-menu.component.html',
-  styleUrls: ['']
+  styleUrls: ['./admin-menu.component.css'],
+
 })
-export class AdminMenuComponent { }
+
+export class AdminMenuComponent {
+  constructor() { }
+
+
+}
