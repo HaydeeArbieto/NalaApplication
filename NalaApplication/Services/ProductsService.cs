@@ -23,12 +23,12 @@ namespace NalaApplication.Services
         }
 
          
-        public async Task<ActionResult<List<Product>>> GetProductsAsync()
+        public async Task<ActionResult> GetProductsAsync()
         {
             var products = await _rep.GetProductsAsync();
             if(products != null)
             {
-                return products;
+                return new OkObjectResult(products);
             }
             else
             {
@@ -37,11 +37,11 @@ namespace NalaApplication.Services
           
         }
 
-        public async Task<ActionResult<List<Product>>> AddProductAsync(Product product)
+        public async Task<ActionResult> AddProductAsync(Product product)
         {
             if(product != null)
             {
-                return await _rep.AddProductAsync(product);
+                return new OkObjectResult(await _rep.AddProductAsync(product));
             }
             else
             {
@@ -49,14 +49,14 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<Product>> GetProductByIdAsync(int id)
+        public async Task<ActionResult> GetProductByIdAsync(int id)
         {
             if(id != 0)
             {
                 var product = await _rep.GetProductByIdAsync(id);
                 if (product != null)
                 {
-                    return product;
+                    return new OkObjectResult(product);
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace NalaApplication.Services
            
         }
 
-        public async Task<ActionResult<List<Product>>> UpdateProductAsync(int id, Product product)
+        public async Task<ActionResult> UpdateProductAsync(int id, Product product)
         {
             if(id != 0)
             {
@@ -78,9 +78,9 @@ namespace NalaApplication.Services
                 if(oldProduct != null)
                 {
                     Product updatedProduct = UpdateProductsProperties(oldProduct, product);
-                  
 
-                    return await _rep.UpdateProductAsync(updatedProduct);
+
+                    return new OkObjectResult(await _rep.UpdateProductAsync(updatedProduct));
                 }
                 else
                 {
@@ -112,14 +112,14 @@ namespace NalaApplication.Services
             return oldProduct;
         }
 
-        public async Task<ActionResult<List<Product>>> RemoveProductAsync(int id)
+        public async Task<ActionResult> RemoveProductAsync(int id)
         {
             if(id > 0)
             {
                 var product = await _rep.GetProductByIdAsync(id);
                 if(product != null)
                 {
-                    return await _rep.RemoveProductAsync(product);
+                    return new OkObjectResult(await _rep.RemoveProductAsync(product));
                 }
                 else
                 {

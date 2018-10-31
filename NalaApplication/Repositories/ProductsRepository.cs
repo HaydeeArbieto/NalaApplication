@@ -15,10 +15,11 @@ namespace NalaApplication.Repositories
         {
             _context = context;
         }
-        //Get all products
+        //Get all products includes products category and size
         public async Task<List<Product>> GetProductsAsync()
         {
-            return await _context.Products.ToListAsync(); 
+            var products = await _context.Products.Include(x=>x.Size).Include(x=>x.Color).Include(x=>x.Category).ToListAsync();
+            return products;
         }
         //Remove product from database, return all products
         public async Task<List<Product>> RemoveProductAsync(Product product)

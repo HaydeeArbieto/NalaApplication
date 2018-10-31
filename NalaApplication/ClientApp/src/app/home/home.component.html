@@ -9,22 +9,15 @@
       <option value="5">sort by price higth to low</option>
     </select>
   </div>
-  <img id="nala93-img" src="./images/Nala-93-av-132-1100x1650.jpg">
-  <img id="nala82-img" src="./images/Nala-82-av-132-750x1125.jpg">
-  <img id="nala58-img" src="./images/Nala-58-av-132-750x1125.jpg">
-  <img id="nala17-img" src="./images/Nala-17-av-132-750x1125.jpg">
-  <img id="nala74-img" src="./images/Nala-74-av-132-750x1125.jpg">
-  <img id="nala11-img" src="./images/Nala-11-av-132-750x1125.jpg">
-  <img id="nala1-img" src="./images/Nala-1-av-132-750x1125.jpg">
-  <img id="nala41-img" src="./images/Nala-41-av-132-750x1125.jpg">
-  <img id="nala28-img" src="./images/Nala-28-av-132-750x1125.jpg">
-  <img id="nala106-img" src="./images/Nala-106-av-132-750x1125.jpg">
-  <img id="nala31-img" src="./images/Nala-31-av-132-750x1125.jpg">
-  <img id="nala61-img" src="./images/Nala-61-av-132-750x1125.jpg">
-
- 
-    <!-->div>1</!--div>
-  <p>hej {{product.name}}</p-->
-
- 
+  <div class="container">
+    <div *ngFor="let product of products" class="row">
+      <div>{{product.name}}</div>
+      <div>{{product.description}}</div>
+      <div>Price: {{product.price}} SEK</div>
+      <div>Category: {{product.category.name}}</div>
+      <div>Size: {{product.size.name}}</div>
+      <div>Stock: {{product.stock}}</div>
+      <img src="{{product.imagePath}}">
+    </div>
+  </div>
 </div>

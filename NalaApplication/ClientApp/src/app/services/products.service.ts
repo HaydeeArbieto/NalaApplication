@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-//@Injectable()
+@Injectable()
 
 export class ProductsService {
-  /*constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getProduct() {
+
+  getProduct(id:number){
     return this.http
-      .get('https://localhost:62856/api/products/1').map(response => response.json());
-      
+      .get('http://localhost:54869/api/products/' + id);
   }
-  */
+
+  getProducts(){
+    return this.http
+      .get('http://localhost:54869/api/products/');
+  }
+  
 }
