@@ -21,7 +21,7 @@ namespace XUnitTestProject
              
             var result = service.GetProductByIdAsync(0).Result;
 
-            Assert.IsType<BadRequestObjectResult>(result.Result);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace XUnitTestProject
         {
             var result = service.AddProductAsync(null).Result;
 
-            Assert.IsType<BadRequestObjectResult>(result.Result);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace XUnitTestProject
         {
             var result = service.UpdateProductAsync(0, null).Result;
 
-            Assert.IsType<NotFoundObjectResult>(result.Result);
+            Assert.IsType<NotFoundObjectResult>(result);
         }
 
         [Fact]
@@ -45,7 +45,7 @@ namespace XUnitTestProject
         {
             var result = service.RemoveProductAsync(0).Result;
 
-            Assert.IsType<BadRequestObjectResult>(result.Result);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
 
         [Fact]

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../services/products.service';
-import { Product } from '../models/models';
-import { Observable } from 'rxjs/Observable';
-import { catchError, map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',

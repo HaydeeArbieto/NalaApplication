@@ -9,12 +9,12 @@ export class ProductsService {
 
   getProduct(id:number){
     return this.http
-      .get('http://localhost:54869/api/products/' + id);
+      .get('http://localhost:50296/api/products/' + id);
   }
 
   getProducts(){
     return this.http
-      .get('http://localhost:54869/api/products/');
+      .get('http://localhost:50296/api/products/');
   }
   
 }

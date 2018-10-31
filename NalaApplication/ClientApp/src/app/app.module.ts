@@ -3,11 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -42,9 +37,12 @@ import { ContactComponent } from './footer/quick-links/contact/contact.component
 
 import { ProductsService } from './services/products.service';
 
-import { AdminModul } from './admin/admin.modul';
-import { routing } from './admin/admin.routing';
+import { AdminModule } from './admin/admin.module';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
 
 @NgModule({
   declarations: [
@@ -86,7 +84,7 @@ import { routing } from './admin/admin.routing';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule, routing, AdminModul,
+    HttpClientModule, AdminModule,
    
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
