@@ -53,9 +53,22 @@ h4 {
 #betala-select {
   width: 45%;
 }
-#show-invoice {
+#part-payments-select {
+  width: 70%;
+}
+#show-invoice, #show-part-paiments, #pay-credit-card-p, #payPal-p {
   padding-left: 17px;
 }
 #terms-of-invoice {
   color: #9a9a9a;
+}
+.modal-dialog {
+  overflow-y: initial !important
+}
+.modal-body {
+  height: 430px;
+  overflow-y: auto;
+}
+#klarna-popup-h4 {
+  text-align: center;
 }

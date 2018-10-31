@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { enableProdMode } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @Component({
   templateUrl: './checkout.component.html',
@@ -8,6 +10,8 @@ export class CheckoutComponent {
 
   public show: boolean = false;
   public buttonName: any = 'Yes';
+
+  display = 'none';
 
   ngOnInit() { }
 
@@ -19,5 +23,15 @@ export class CheckoutComponent {
       this.buttonName = "No";
     else
       this.buttonName = "Yes";
+  }
+
+  //constructor() { };
+
+  openModal() {
+    this.display = 'block';
+  }
+
+  onCloseHandled() {
+    this.display = 'none';
   }
 }
