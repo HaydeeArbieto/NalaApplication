@@ -5,13 +5,16 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 
 @NgModule({
   imports: [
-    AdminRoutingModule, BrowserModule, RouterModule,
+    AdminRoutingModule, BrowserModule, RouterModule, BrowserAnimationsModule, MatButtonModule, MatCheckboxModule
   ],
-  declarations: [ AdminComponent, AdminDashboardComponent, AdminMenuComponent],
+  declarations: [ AdminComponent, AdminDashboardComponent, AdminMenuComponent, AdminProductsComponent],
   bootstrap: [],
 })
 export class AdminModule { }

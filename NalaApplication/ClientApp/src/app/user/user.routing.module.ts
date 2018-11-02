@@ -23,7 +23,6 @@ import { FaqOrderComponent } from './footer/quick-links/faq/faq-order/faq.order.
 import { FaqPaymentComponent } from './footer/quick-links/faq/faq-payment/faq.payment.component';
 import { FaqDeliveryComponent } from './footer/quick-links/faq/faq-delivery/faq.delivery.component';
 import { FaqReturnComponent } from './footer/quick-links/faq/faq-return/faq.return.component';
-import { NavbarComponent } from 'angular-bootstrap-md/angular-bootstrap-md/navbars';
 import { UserComponent } from './user.component';
 
 
@@ -33,6 +32,7 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'cart', component: CartComponent },
       { path: 'lookbok', component: LookbokComponent },

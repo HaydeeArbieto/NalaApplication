@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 //import { MyAccountModule } from './app/my-account/my-account.module';
 import { environment } from './environments/environment';
-
+import 'hammerjs';
 export function getBaseUrl() {
   return document.getElementsByTagName('base')[0].href;
 }

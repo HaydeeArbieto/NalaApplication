@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { enableProdMode } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @Component({
   templateUrl: './checkout.component.html',
