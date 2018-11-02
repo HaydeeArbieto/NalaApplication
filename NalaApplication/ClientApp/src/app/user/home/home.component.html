@@ -1,0 +1,18 @@
+
+
+
+<div class="container">
+  <div *ngFor="let product of products" class="row">
+    <div>{{product.name}}</div>
+    <div>{{product.description}}</div>
+    <div>Price: {{product.price}} SEK</div>
+    <div>Category: {{product.category.name}}</div>
+    <div>Size: {{product.size.name}}</div>
+    <div>Stock: {{product.stock}}</div>
+    <img src="{{product.imagePath}}">
+  </div>
+</div>
+
+
+
+

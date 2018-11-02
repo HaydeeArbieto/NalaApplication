@@ -1,0 +1,75 @@
+#nala93-img, #nala58-img, #nala74-img, #nala1-img, #nala28-img, #nala31-img {
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 400px;
+  margin-right: 50px;
+}
+
+#nala82-img, #nala17-img, #nala11-img, #nala41-img, #nala106-img, #nala61-img {
+  width: 500px;
+  margin-top: 20px;
+}
+
+#div-sorting {
+  width: 210px;
+  margin-left: 400px;
+}
+
+#sorting option {
+  color: #9a9a9a;
+}
+/* #sorting option:first-child { /*??
+  color: rgba(213, 183, 114, 1);
+  font-weight: bold;
+}*/
+
+@media (max-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+  .body-content {
+    padding-top: 50px;
+  }
+}
+
+#logo-image {
+  margin: 50px;
+  width: 700px;
+  border-bottom: 20px solid;
+  border-color: rgb(255,165,0);
+  /* Align image center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbar2 ul {
+  display: inline-block;
+}
+
+#div-navbar2 a {
+  color: #9a9a9a; /*main-color-to- all*/
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#cart {
+  width: 23px;
+  height: 23px;
+}
+
+#div-navbar2 {
+  margin-right: inherit;
+}
+
+#copyright {
+  padding-bottom: 20px;
+}
+
+  #copyright p {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
+.container {
+  padding-right: 0;
+}

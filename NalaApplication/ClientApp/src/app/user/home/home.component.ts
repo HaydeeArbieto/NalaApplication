@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from '../../shared/services/products.service';
 import { map } from 'rxjs/operators';
 
 @Component({
