@@ -1,31 +1,9 @@
-#nala93-img, #nala58-img, #nala74-img, #nala1-img, #nala28-img, #nala31-img {
-  width: 500px;
-  margin-top: 20px;
-  margin-left: 400px;
-  margin-right: 50px;
-}
-#nala82-img, #nala17-img, #nala11-img, #nala41-img, #nala106-img, #nala61-img {
-  width: 500px;
-  margin-top: 20px;
-}
-#div-sorting {
-  width: 210px;
-  margin-left: 400px;
-}
-#sorting option {
-  color: #9a9a9a;
-}
-/* #sorting option:first-child { /*??
-  color: rgba(213, 183, 114, 1);
-  font-weight: bold;
-}*/
-
-@media (max-width: 767px) {
-  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+/*@media (max-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. 
   .body-content {
     padding-top: 50px;
   }
-}
+}*/
 
 #logo-image {
   margin: 50px;
@@ -49,25 +27,24 @@
 }
 
 #cart {
-  width: 23px;
-  height: 23px;
+  width: 27px;
+  height: 27px;
 }
 
 #div-navbar2 {
-  margin-right: inherit;
+  /*margin-right: inherit;*/
 }
 
 #copyright {
   padding-bottom: 20px;
 }
 
-  #copyright p {
-    text-align: center;
-    font-size: 12px;
-    padding-bottom: 20px;
-  }
-
-.container {
-  padding-right: 0;
+#copyright p {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
 }
 
+.container {
+  /*padding-right: 0;*/
+}

@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using NalaApplication.Helpers;
+﻿using NalaApplication.Helpers;
 using NalaApplication.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using NalaApplication.Repositories;
 
@@ -59,9 +54,6 @@ namespace NalaApplication.Services
             SessionHelper.SetObjectAsJson(_session, "cart", cart);
             return cart;
         }
-
-
-
 
         private async Task<Product> GetProductFromRepository(int id)
         {

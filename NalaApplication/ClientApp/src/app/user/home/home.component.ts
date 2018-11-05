@@ -13,7 +13,6 @@ export class HomeComponent {
 
   products:any = [];
 
-
   ngOnInit() {
     return this.serv.getProducts().map(response => response)
       .subscribe(result => this.products = result);

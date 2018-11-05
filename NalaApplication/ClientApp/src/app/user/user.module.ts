@@ -30,8 +30,6 @@ import { RouterModule } from '@angular/router';
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user.routing.module';
 
-
-
 @NgModule({
   declarations: [
  
@@ -41,33 +39,32 @@ import { UserRoutingModule } from './user.routing.module';
     FooterComponent,
     HomeComponent,
     MyAccountComponent,
-  CheckoutComponent,
-  CartComponent,
+    CheckoutComponent,
+    CartComponent,
 
-  LookbokComponent,
+    LookbokComponent,
 
-  DashboardComponent,
-  OrdersComponent,
-  DownloadsComponent,
-  AddressesComponent,
-  PaymentsMethodsComponent,
-  AccountDetailsComponent,
-  LogoutComponent,
-  AboutComponent,
-  ReturnsComponent,
-  ShippingComponent,
-  SizeGuideComponent,
+    DashboardComponent,
+    OrdersComponent,
+    DownloadsComponent,
+    AddressesComponent,
+    PaymentsMethodsComponent,
+    AccountDetailsComponent,
+    LogoutComponent,
+    AboutComponent,
+    ReturnsComponent,
+    ShippingComponent,
+    SizeGuideComponent,
 
     FaqComponent,
-  FaqOrderComponent,
-  FaqPaymentComponent,
-  FaqDeliveryComponent,
-  FaqReturnComponent,
+    FaqOrderComponent,
+    FaqPaymentComponent,
+    FaqDeliveryComponent,
+    FaqReturnComponent,
 
-  TermsConditionsComponent,
-  ContactComponent,
-    
-   
+    TermsConditionsComponent,
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule, RouterModule, UserRoutingModule
