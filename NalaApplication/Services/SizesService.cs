@@ -3,7 +3,6 @@ using NalaApplication.Constants;
 using NalaApplication.Extensions;
 using NalaApplication.InterFaces;
 using NalaApplication.Models;
-using NalaApplication.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +10,20 @@ using System.Threading.Tasks;
 
 namespace NalaApplication.Services
 {
-    public class CategoriesService
+    public class SizesService
     {
-      
-        private readonly IGenericRepository<Category> _rep;
-        public CategoriesService(IGenericRepository<Category> rep)
+        private readonly IGenericRepository<Size> _rep;
+        public SizesService(IGenericRepository<Size> rep)
         {
             _rep = rep;
         }
 
-        public async Task<ActionResult<IEnumerable<Category>>> GetAllCategoriesAsync()
+        public async Task<ActionResult<IEnumerable<Size>>> GetAllSizesAsync()
         {
-            var categories = await _rep.FindAllAsync();
-            if (categories != null)
+            var sizes = await _rep.FindAllAsync();
+            if (sizes != null)
             {
-                return categories.ToList();
+                return sizes.ToList();
             }
             else
             {
@@ -33,14 +31,14 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<Category>> GetCategoryByIdAsync(int id)
+        public async Task<ActionResult<Size>> GetSizeByIdAsync(int id)
         {
-            if(id != 0)
+            if (id != 0)
             {
-                var categories = await _rep.FindAllAsync();
-                if(categories != null)
+                var sizes = await _rep.FindAllAsync();
+                if (sizes != null)
                 {
-                    return categories.FirstOrDefault(x => x.Id == id);
+                    return sizes.FirstOrDefault(x => x.Id == id);
                 }
                 else
                 {
@@ -53,20 +51,20 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<IEnumerable<Category>>> AddCategoryAsync(string name)
+        public async Task<ActionResult<IEnumerable<Size>>> AddSizeAsync(string name)
         {
-            if(name != null)
+            if (name != null)
             {
-                if(await CheckIfCategoryExistsAsync(name))
+                if (await CheckIfSizeExistsAsync(name))
                 {
                     return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectAlreadyExists });
                 }
                 else
                 {
-                    Category category = CreateCategory(name);
-                     _rep.Create(category);
+                    Size size = CreateSize(name);
+                    _rep.Create(size);
                     await _rep.SaveAsync();
-                    return new OkObjectResult(await _rep.FindAllAsync()); 
+                    return new OkObjectResult(await _rep.FindAllAsync());
                 }
             }
             else
@@ -75,10 +73,10 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<bool> CheckIfCategoryExistsAsync(string name)
+        public async Task<bool> CheckIfSizeExistsAsync(string name)
         {
-            var category = await GetCategoryBySearchAsync(name);
-            if (category != null)
+            var size = await GetSizeBySearchAsync(name);
+            if (size != null)
             {
                 return true;
             }
@@ -88,31 +86,31 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<Category> GetCategoryBySearchAsync(string name)
+        public async Task<Size> GetSizeBySearchAsync(string name)
         {
-            if(string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name))
             {
                 return null;
             }
             else
             {
-                var categories = await _rep.FindAllAsync();
-                var category = categories.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
-                return category;
+                var sizes = await _rep.FindAllAsync();
+                var size = sizes.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+                return size;
             }
         }
 
-        public Category CreateCategory(string name)
+        public Size CreateSize(string name)
         {
-            return new Category { Name = name.UppercaseFirst() };
+            return new Size { Name = name.UppercaseFirst() };
         }
 
-        public async Task<ActionResult<List<Category>>> RemoveCategoryAsync(int id)
+        public async Task<ActionResult<List<Size>>> RemoveSizeAsync(int id)
         {
             if (id != 0)
             {
-                var category = GetCategoryByIdAsync(id).Result;
-                 _rep.Delete(category.Value);
+                var size = GetSizeByIdAsync(id).Result;
+                _rep.Delete(size.Value);
                 await _rep.SaveAsync();
                 return new OkObjectResult(await _rep.FindAllAsync());
             }
@@ -123,12 +121,12 @@ namespace NalaApplication.Services
 
         }
 
-        public async Task<ActionResult<List<Category>>> UpdateCategoryAsync(Category category)
+        public async Task<ActionResult<List<Size>>> UpdateSizeAsync(Size size)
         {
 
-            if (category != null)
+            if (size != null)
             {
-                  _rep.Update(category);
+                _rep.Update(size);
                 await _rep.SaveAsync();
                 return new OkObjectResult(await _rep.FindAllAsync());
             }
@@ -138,6 +136,5 @@ namespace NalaApplication.Services
             }
 
         }
-
     }
 }

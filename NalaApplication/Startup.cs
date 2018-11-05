@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -8,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NalaApplication.Data;
+using NalaApplication.InterFaces;
+using NalaApplication.Models;
 using NalaApplication.Repositories;
 using NalaApplication.Services;
 using System.Threading.Tasks;
@@ -41,10 +42,15 @@ namespace NalaApplication
             services.AddTransient<ProductsService>();
             services.AddTransient<ProductsRepository>();
             services.AddTransient<CartsService>();
-            services.AddTransient<CategoriesRepository>();
             services.AddTransient<CategoriesService>();
             services.AddTransient<OrdersService>();
             services.AddTransient<OrdersRepository>();
+            services.AddTransient<ColorsService>();
+            services.AddTransient<SizesService>();
+            services.AddTransient<IGenericRepository<Category>, GenericRepository<Category>>();
+            services.AddTransient<IGenericRepository<Color>, GenericRepository<Color>>();
+            services.AddTransient<IGenericRepository<Size>, GenericRepository<Size>>();
+
             services.AddSpaStaticFiles(configuration =>
 			{
 				configuration.RootPath = "ClientApp/dist";
