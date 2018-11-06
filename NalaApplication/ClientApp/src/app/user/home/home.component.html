@@ -1,15 +1,24 @@
-
-
-
 <div class="container">
-  <div *ngFor="let product of products" class="row">
-    <div>{{product.name}}</div>
-    <div>{{product.description}}</div>
-    <div>Price: {{product.price}} SEK</div>
+  <div>
+    <div id="div-sorting">
+      <select class="form-control" id="sorting">
+        <option selected>Default Sorting</option>
+        <option value="1">Sort by popurarity</option>
+        <option value="2">Sort by average rating</option>
+        <option value="3">sort by newness</option>
+        <option value="4">sort by price low to hight</option>
+        <option value="5">sort by price higth to low</option>
+      </select>
+    </div>
+  </div>
+  <div id="div-img" *ngFor="let product of products" class="row">
+    <img src="{{product.imagePath}}">
+    <p id="name">{{product.name}}</p>
+    <p>{{product.description}}</p>
+    <div>{{product.price}} &nbsp; SEK</div>
     <div>Category: {{product.category.name}}</div>
     <div>Size: {{product.size.name}}</div>
     <div>Stock: {{product.stock}}</div>
-    <img src="{{product.imagePath}}">
   </div>
 </div>
 

@@ -105,7 +105,7 @@
             Klarna Invoice <img id="klarna-img" src="../images/klarna2.png" />
           </label>
           <div id="show-invoice">
-            <p id="terms-of-invoice">Terms of invoice</p>
+            <a (click)="openModal()"><p id="terms-of-invoice" >Terms of invoice</p></a>
             <p>Payment plan*</p>
             <div class="form-group">
               <select class="form-control form-control-sm" id="betala-select">
@@ -162,7 +162,6 @@
     </form>
   </div>
 
-  <button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button>
   <!-- Modal section -->
   <div class="backdrop" [ngStyle]="{'display':display}"></div>
   <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
@@ -181,14 +180,14 @@
             <li>Få alltid din beställning innan du betalar</li>
             <li>Betalningstid - alltid minst 14 dagar</li>
             <li>Alltid 14 dagars ångerrätt i enlighet med distans- och hemförsäljningslagen*</li>
-            <li>Ladda ner dina fakturor från klarna.se</li>
+            <li>Ladda ner dina fakturor från <a href="https://www.klarna.com/se/">klarna.se</a></li>
             <li>Möjlighet till delbetalning**</li>
           </ul>
           <h4>Betalningsvillkor</h4>
           <p>
             Kredittiden för detta köp är 14 dagar från fakturadatum. Näringsidkare kan, när det så anges i kassan, erbjudas en kredittid på 30 dagar från fakturadatum. Fakturan skickas i samband med leveransen. I enlighet med avtalet med e-butiken debiteras en fakturaavgift om 0 kr.
             En påminnelseavgift tillkommer vid utebliven betalning. Har du handlat för under 60 kr tillkommer 29,00 kr, och har du handlat för 60 kr eller mer tillkommer 60,00 kr i påminnelseavgift. Även en dröjsmålsränta om 24,00 % plus gällande referensränta tillkommer. Sker ingen betalning därefter kan fordran därefter komma att överlämnas för inkassohantering där ytterligare inkassokostnader kan tillkomma.
-            Om du tidigare valt att ansluta dig till tjänsten Månadsfaktura kommer fakturan istället att inkluderas i din månadsfaktura i enlighet med de villkor som gäller för Månadsfaktura.
+            Om du tidigare valt att ansluta dig till tjänsten Månadsfaktura kommer fakturan istället att inkluderas i din månadsfaktura i enlighet med de villkor som gäller för <a href="https://www.klarna.com/se/">Månadsfaktura.</a>
             När du väljer faktura övertar Klarna rätten att få betalt och din betalning av fakturan går därmed till Klarna.
           </p>
           <h4>Kreditprövning</h4>
@@ -218,3 +217,4 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal !-->
+</div>

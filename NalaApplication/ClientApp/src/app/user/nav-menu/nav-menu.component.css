@@ -1,54 +1,5 @@
-#nala93-img, #nala58-img, #nala74-img, #nala1-img, #nala28-img, #nala31-img {
-  width: 500px;
-  margin-top: 20px;
-  margin-left: 400px;
-  margin-right: 50px;
-}
-
-#nala82-img, #nala17-img, #nala11-img, #nala41-img, #nala106-img, #nala61-img {
-  width: 500px;
-  margin-top: 20px;
-}
-
-#div-sorting {
-  width: 210px;
-  margin-left: 400px;
-}
-
-#sorting option {
-  color: #9a9a9a;
-}
-/* #sorting option:first-child { /*??
-  color: rgba(213, 183, 114, 1);
-  font-weight: bold;
-}*/
-
-@media (max-width: 767px) {
-  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-  .body-content {
-    padding-top: 50px;
-  }
-}
-
-#logo-image {
-  margin: 50px;
-  width: 700px;
-  border-bottom: 20px solid;
-  border-color: rgb(255,165,0);
-  /* Align image center */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#navbar2 ul {
-  display: inline-block;
-}
-
-#div-navbar2 a {
-  color: #9a9a9a; /*main-color-to- all*/
-  font-weight: bold;
-  font-size: 15px;
+#navbar-upp {
+  padding: 2px;
 }
 
 #cart {
@@ -56,20 +7,29 @@
   height: 23px;
 }
 
-#div-navbar2 {
-  margin-right: inherit;
+.search-container {
+  margin-top: 25px;
 }
 
-#copyright {
-  padding-bottom: 20px;
+#div-navbar1 a, #label-currency {
+  font-size: 11px;
+  font-weight: bold;
+  color: #9a9a9a; /*main color to all words*/
 }
 
-  #copyright p {
-    text-align: center;
-    font-size: 12px;
-    padding-bottom: 20px;
-  }
+#currency-select option {
+  color: #9a9a9a;
+}
 
-.container {
-  padding-right: 0;
+#div-navbar1 {
+  margin-left: initial;
+}
+
+#div-navbar1 {
+  width: auto;
+}
+
+#li-currency {
+  margin-left: 1100px;
+  margin-top: 15px;
 }
