@@ -1,19 +1,22 @@
 #about-title, #about-p, h4 {
   text-align: center;
 }
+
 h1 {
-  color: #927c46;
+  color: #9a9a9a;
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
   margin: 70px;
 }
+
 #to {
   color: rgb(255,165,0);
   font-style: italic;
 }
+
 h4, p {
-  color: #927c46;
+  color: #9a9a9a;
   font-family: 'Poppins', sans-serif;
 }
 .column {
@@ -22,26 +25,31 @@ h4, p {
   padding: 15px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 #column-div {
   margin-top: 150px;
   margin-left: 10px;
 }
+
 #main-about-div {
   margin-top: 150px;
   margin-left: 310px;
   margin-right: 310px;
   
 }
+
 #about-p {
   font-size: 17px;
   font-weight: bold;
 }
+
 h4 {
   font-weight: bold;
   margin-bottom: 25px;

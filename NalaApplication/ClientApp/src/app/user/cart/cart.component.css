@@ -1,1 +1,16 @@
+#cart-container {
+  margin-left: 200px;
+  margin-right: 200px;
+}
 
+#input-number {
+  width: 60px;
+}
+
+.input-group {
+  width: 20%;
+}
+
+button {
+  background-color: rgb(255,165,0);
+}

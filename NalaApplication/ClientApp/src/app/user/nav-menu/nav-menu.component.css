@@ -9,6 +9,7 @@
 
 .search-container {
   margin-top: 25px;
+  margin-left: 50px;
 }
 
 #div-navbar1 a, #label-currency {
@@ -23,9 +24,6 @@
 
 #div-navbar1 {
   margin-left: initial;
-}
-
-#div-navbar1 {
   width: auto;
 }
 
