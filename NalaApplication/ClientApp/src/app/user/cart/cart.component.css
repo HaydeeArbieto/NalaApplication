@@ -14,3 +14,7 @@
 button {
   background-color: rgb(255,165,0);
 }
+
+.form-control {
+  width: 89%;
+}

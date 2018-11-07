@@ -4,18 +4,22 @@
   margin-left: 400px;
   margin-right: 50px;
 }
+
 #nala82-img, #nala17-img, #nala11-img, #nala41-img, #nala106-img, #nala61-img {
   width: 500px;
   margin-top: 20px;
 }
+
 #div-sorting {
   width: 210px;
   margin-left: 400px;
 }
+
 #sorting option {
   color: rgba(213, 183, 114, 1);
 }
-  #sorting option:first-child { /*??*/
+
+#sorting option:first-child { /*??*/
   color: rgba(213, 183, 114, 1);
   font-weight: bold;
 }
