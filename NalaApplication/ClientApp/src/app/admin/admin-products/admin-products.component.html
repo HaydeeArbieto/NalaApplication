@@ -1,22 +1,37 @@
-<!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+<button id="btn-new" type="button" class="btn btn-primary"  (click)="routeToNewProduct()">New product</button>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><p>#</p></th>
+      <th scope="col"><p>Name</p></th>
+      <th scope="col"><p>Description</p></th>
+      <th scope="col"><p>Category</p></th>
+      <th scope="col"><p>Size</p></th>
+      <th scope="col"><p>Stock</p></th>
+      <th scope="col"><p>Price/SEK</p></th>
+      <th scope="col"><p>Image</p></th>
+      <th scope="col"><p>Rating</p></th>
+      <th></th>
+      <th></th>
+      <th></th>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td><p>{{product.id}}</p></td>
+      <td><p>{{product.name}}</p></td>
+      <td><p>{{product.description}}</p></td>
+      <td><p>{{product.category.name}}</p></td>
+      <td><p>{{product.size.name}}</p></td>
+      <td><p>{{product.stock}}</p></td>
+      <td><p>{{product.price}}</p></td>
+      <td><img class="table-img" src="{{product.imagePath}}" alt="Card image cap"></td>
+      <td><p>{{product.rating}}</p></td>
+      <td><button id="btn-copy" type="button" value="{{product.id}}" class="btn btn-link">Copy</button></td>
+      <td><button id="btn-edit" type="button" value="{{product.id}}" class="btn btn-link">Edit</button></td>
+      <td><button id="btn-delete" type="button" value="{{product.id}}" class="btn btn-link">Delete</button></td>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+    </tr>
+  </tbody>
+</table>
