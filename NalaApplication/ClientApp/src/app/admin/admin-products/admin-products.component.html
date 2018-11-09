@@ -1,37 +1,7 @@
-<button id="btn-new" type="button" class="btn btn-primary"  (click)="routeToNewProduct()">New product</button>
-<table class="table table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col"><p>#</p></th>
-      <th scope="col"><p>Name</p></th>
-      <th scope="col"><p>Description</p></th>
-      <th scope="col"><p>Category</p></th>
-      <th scope="col"><p>Size</p></th>
-      <th scope="col"><p>Stock</p></th>
-      <th scope="col"><p>Price/SEK</p></th>
-      <th scope="col"><p>Image</p></th>
-      <th scope="col"><p>Rating</p></th>
-      <th></th>
-      <th></th>
-      <th></th>
+<div class="container">
+  <app-products-menu></app-products-menu>
+  <router-outlet></router-outlet>
+</div>
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td><p>{{product.id}}</p></td>
-      <td><p>{{product.name}}</p></td>
-      <td><p>{{product.description}}</p></td>
-      <td><p>{{product.category.name}}</p></td>
-      <td><p>{{product.size.name}}</p></td>
-      <td><p>{{product.stock}}</p></td>
-      <td><p>{{product.price}}</p></td>
-      <td><img class="table-img" src="{{product.imagePath}}" alt="Card image cap"></td>
-      <td><p>{{product.rating}}</p></td>
-      <td><button id="btn-copy" type="button" value="{{product.id}}" class="btn btn-link">Copy</button></td>
-      <td><button id="btn-edit" type="button" value="{{product.id}}" class="btn btn-link">Edit</button></td>
-      <td><button id="btn-delete" type="button" value="{{product.id}}" class="btn btn-link">Delete</button></td>
 
-    </tr>
-  </tbody>
-</table>
+

@@ -1,0 +1,61 @@
+
+<div class="container">
+  {{submitted}}
+  {{productForm.value | json}}
+  <h1>New Product</h1>
+  <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="ng-valid form-control" type="text" name="name" [(ngModel)]="productModel.name"
+             required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input class="form-control ng-valid" type="text" name="description" [(ngModel)]="productModel.description"
+             required>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input class="form-control ng-valid" type="text" name="price" [(ngModel)]="productModel.price" required>
+    </div>
+
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input class="form-control ng-valid" type="text" name="stock" [(ngModel)]="productModel.stock" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select class="ng-valid form-control" required
+              [(ngModel)]="productModel.categoryid" name="category" type="text">
+        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="size">Size</label>
+      <select class="ng-valid form-control" required
+              [(ngModel)]="productModel.sizeid" name="size" type="text">
+        <option *ngFor="let size of sizes" [value]="size.id">{{size.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="color">Color</label>
+      <select class="ng-valid form-control" required
+              [(ngModel)]="productModel.colorid" name="color" type="text">
+        <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="imagepath">Image</label>
+      <input class="ng-valid form-control" type="file" name="imagepath" (change)="onFileChanged($event)">
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid">Submit</button>
+
+  </form>
+
+</div>

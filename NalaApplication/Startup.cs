@@ -31,7 +31,8 @@ namespace NalaApplication
             {
                 builder.AllowAnyOrigin()
                        .AllowAnyMethod()
-                       .AllowAnyHeader();
+                       .AllowAnyHeader()
+                       .AllowCredentials();
             }));
           
             services.AddDistributedMemoryCache();
