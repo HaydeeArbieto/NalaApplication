@@ -11,21 +11,20 @@ using System.Threading.Tasks;
 
 namespace NalaApplication.Services
 {
-    public class CategoriesService
+    public class ColorsService
     {
-      
-        private readonly IGenericRepository<Category> _rep;
-        public CategoriesService(IGenericRepository<Category> rep)
+        private readonly IGenericRepository<Color> _rep;
+        public ColorsService(IGenericRepository<Color> rep)
         {
             _rep = rep;
         }
 
-        public async Task<ActionResult<IEnumerable<Category>>> GetAllCategoriesAsync()
+        public async Task<ActionResult<IEnumerable<Color>>> GetAllColorsAsync()
         {
-            var categories = await _rep.FindAllAsync();
-            if (categories != null)
+            var colors = await _rep.FindAllAsync();
+            if (colors != null)
             {
-                return categories.ToList();
+                return colors.ToList();
             }
             else
             {
@@ -33,14 +32,14 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<Category>> GetCategoryByIdAsync(int id)
+        public async Task<ActionResult<Color>> GetColorByIdAsync(int id)
         {
-            if(id != 0)
+            if (id != 0)
             {
-                var categories = await _rep.FindAllAsync();
-                if(categories != null)
+                var colors = await _rep.FindAllAsync();
+                if (colors != null)
                 {
-                    return categories.FirstOrDefault(x => x.Id == id);
+                    return colors.FirstOrDefault(x => x.Id == id);
                 }
                 else
                 {
@@ -53,20 +52,20 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<ActionResult<IEnumerable<Category>>> AddCategoryAsync(string name)
+        public async Task<ActionResult<IEnumerable<Color>>> AddColorAsync(string name)
         {
-            if(name != null)
+            if (name != null)
             {
-                if(await CheckIfCategoryExistsAsync(name))
+                if (await CheckIfColorExistsAsync(name))
                 {
                     return new BadRequestObjectResult(new { ErrorMessage = ErrorMessages.ObjectAlreadyExists });
                 }
                 else
                 {
-                    Category category = CreateCategory(name);
-                     _rep.Create(category);
+                    Color color = CreateColor(name);
+                    _rep.Create(color);
                     await _rep.SaveAsync();
-                    return new OkObjectResult(await _rep.FindAllAsync()); 
+                    return new OkObjectResult(await _rep.FindAllAsync());
                 }
             }
             else
@@ -75,10 +74,10 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<bool> CheckIfCategoryExistsAsync(string name)
+        public async Task<bool> CheckIfColorExistsAsync(string name)
         {
-            var category = await GetCategoryBySearchAsync(name);
-            if (category != null)
+            var color = await GetColorBySearchAsync(name);
+            if (color != null)
             {
                 return true;
             }
@@ -88,31 +87,31 @@ namespace NalaApplication.Services
             }
         }
 
-        public async Task<Category> GetCategoryBySearchAsync(string name)
+        public async Task<Color> GetColorBySearchAsync(string name)
         {
-            if(string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name))
             {
                 return null;
             }
             else
             {
-                var categories = await _rep.FindAllAsync();
-                var category = categories.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
-                return category;
+                var colors = await _rep.FindAllAsync();
+                var color = colors.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+                return color;
             }
         }
 
-        public Category CreateCategory(string name)
+        public Color CreateColor(string name)
         {
-            return new Category { Name = name.UppercaseFirst() };
+            return new Color { Name = name.UppercaseFirst() };
         }
 
-        public async Task<ActionResult<List<Category>>> RemoveCategoryAsync(int id)
+        public async Task<ActionResult<List<Color>>> RemoveColorAsync(int id)
         {
             if (id != 0)
             {
-                var category = GetCategoryByIdAsync(id).Result;
-                 _rep.Delete(category.Value);
+                var color = GetColorByIdAsync(id).Result;
+                _rep.Delete(color.Value);
                 await _rep.SaveAsync();
                 return new OkObjectResult(await _rep.FindAllAsync());
             }
@@ -123,12 +122,12 @@ namespace NalaApplication.Services
 
         }
 
-        public async Task<ActionResult<List<Category>>> UpdateCategoryAsync(Category category)
+        public async Task<ActionResult<List<Color>>> UpdateColorAsync(Color color)
         {
 
-            if (category != null)
+            if (color != null)
             {
-                  _rep.Update(category);
+                _rep.Update(color);
                 await _rep.SaveAsync();
                 return new OkObjectResult(await _rep.FindAllAsync());
             }
@@ -138,6 +137,5 @@ namespace NalaApplication.Services
             }
 
         }
-
     }
 }

@@ -1,15 +1,16 @@
 export class Product {
-  Id : number;
-  Name: string;
-  Stock: string;
-  Price: number;
-  Description: string;
-  PublishDate: Date;
-  ImagePath: string;
-  Color:string;
-  Size: string;
-  Raiting: number;
-  Category: string;
+  constructor(
+    public name: string,
+    public stock: string,
+    public price: string,
+    public description: string,
+    public publishdate: string,
+    public imagepath: string,
+    public colorid: string,
+    public sizeid: string,
+    public raiting: string,
+    public categoryid: string,
+  ) { }
    
 }
 

@@ -24,14 +24,14 @@ namespace NalaApplication.Repositories
         //Remove product from database, return all products
         public async Task<List<Product>> RemoveProductAsync(Product product)
         {
-            _context.Products.Remove(product);
+            _context.Entry(product).State = EntityState.Deleted;
             await _context.SaveChangesAsync();
             return await GetProductsAsync();
         }
         //Add product in database, returns all products
         public async Task<List<Product>> AddProductAsync(Product product)
         {
-            await _context.Products.AddAsync(product);
+             _context.Entry(product).State = EntityState.Added;
             await _context.SaveChangesAsync();
             return await GetProductsAsync();
         }
@@ -45,7 +45,7 @@ namespace NalaApplication.Repositories
         //Update a product in the database, returns all products
         public async Task<List<Product>> UpdateProductAsync(Product product)
         {
-             _context.Products.Update(product);
+            _context.Entry(product).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return await GetProductsAsync();
         }
