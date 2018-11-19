@@ -6,14 +6,19 @@
 }*/
 
 #logo-image {
-  margin: 50px;
+  margin-top: 140px;
+  margin-bottom:20px;
   width: 700px;
   border-bottom: 20px solid;
   border-color: rgb(255,165,0);
   /* Align image center */
-  display: block;
+  display: initial;
   margin-left: auto;
   margin-right: auto;
+}
+
+#logo-img-div {
+  padding: 20px;
 }
 
 #navbar2 ul {
@@ -31,8 +36,8 @@
   height: 27px;
 }
 
-#div-navbar2 {
-  /*margin-right: inherit;*/
+#div-navbar2 a {
+  padding: 25px;
 }
 
 #copyright {

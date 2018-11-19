@@ -1,40 +1,43 @@
 <div>
-  <nav id="navbar-upp" class="navbar navbar-expand-lg navbar-light bg-light">
-    <div id="div-navbar1" class='container'>
-      <ul class="nav navbar-nav">
-        <li class='nav-item'>
-          <a class='nav-link' routerLink="/home">HOME</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' routerLink="/my-account">MY ACCOUNT</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' routerLink="/checkout">CHECKOUT</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
-        </li>
-        <li id="li-currency" class='nav-item'>
-          <label id="label-currency" class="col-sm-24 control-label" for="currency1">CHANGE CURRENCY:</label>
-          <div id="currency-div">
-            <select class="form-control" id="currency-select">
-              <option selected>USD, $</option>
-              <option value="1">EUR, €</option>
-              <option value="2">SEK, Kr</option>
-              <option value="3">GPR, €</option>
-            </select>
-          </div>
-        </li>
-        <li class='nav-item'>
-          <div class="search-container">
-            <form class="example" style="margin:auto; max-width:300px">
-              <input id="imput-search" type="text" placeholder="Search here" name="search">
-              <button id="button-search" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <nav id="navbar-left" class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="nav navbar-nav">
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/home">HOME</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/my-account">MY ACCOUNT</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/checkout">CHECKOUT</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/cart"><img id="cart" src="./images/cart2.jpg"></a>
+      </li>
+    </ul>
   </nav>
+
+  <nav id="navbar-right" class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="nav navbar-nav">
+      <li id="li-currency" class='nav-item'>
+        <label id="label-currency" class="col-sm-24 control-label" for="currency1">CHANGE CURRENCY:</label>
+        <div id="currency-div">
+          <select class="form-control" id="currency-select">
+            <option selected>USD, $</option>
+            <option value="1">EUR, €</option>
+            <option value="2">SEK, Kr</option>
+            <option value="3">GPR, €</option>
+          </select>
+        </div>
+      </li>
+      <li class='nav-item'>
+        <div class="search-container">
+          <form class="search-form">
+            <input id="imput-search" type="text" placeholder="Search here" name="search">
+            <button id="button-search" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </li>
+      </ul>
+    </nav>
 </div>
 

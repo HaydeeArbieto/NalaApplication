@@ -1,0 +1,17 @@
+#faq-navbar-ul a {
+  font-weight: bold;
+  padding: 25px;
+}
+
+a.nav-link:focus, a.nav-link:hover {
+  background-color: rgb(255,165,0) !important;
+}
+
+a.nav-link {
+  background-color: #f8f9fa;
+}
+
+.search-form {
+  margin:auto;
+  max-width:300px;
+}

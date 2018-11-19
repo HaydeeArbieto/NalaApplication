@@ -1,4 +1,4 @@
-#navbar-upp {
+#navbar-left {
   padding: 2px;
 }
 
@@ -12,7 +12,7 @@
   margin-left: 50px;
 }
 
-#div-navbar1 a, #label-currency {
+a, #label-currency {
   font-size: 11px;
   font-weight: bold;
   color: #9a9a9a; /*main color to all words*/
@@ -22,12 +22,15 @@
   color: #9a9a9a;
 }
 
-#div-navbar1 {
-  margin-left: initial;
-  width: auto;
+#li-currency {
+  margin-left: 494px;
+  margin-top: 15px;
 }
 
-#li-currency {
-  margin-left: 1100px;
-  margin-top: 15px;
+#navbar-left {
+  float: left;
+}
+
+#navbar-right {
+  float: right;
 }

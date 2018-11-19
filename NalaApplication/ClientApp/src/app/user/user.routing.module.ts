@@ -18,7 +18,7 @@ import { ShippingComponent } from './footer/customer-care/shipping-delivery/ship
 import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide.component';
 import { TermsConditionsComponent } from './footer/quick-links/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './footer/quick-links/contact/contact.component';
-import { FaqComponent } from './footer/quick-links/faq/faq.component';
+import { FaqComponent } from './footer/quick-links/faq/faq.navbar.component';
 import { FaqOrderComponent } from './footer/quick-links/faq/faq-order/faq.order.component';
 import { FaqPaymentComponent } from './footer/quick-links/faq/faq-payment/faq.payment.component';
 import { FaqDeliveryComponent } from './footer/quick-links/faq/faq-delivery/faq.delivery.component';
