@@ -4,7 +4,6 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
-import { LookbokComponent } from './lookbok/lookbok.component';
 import { DashboardComponent } from './my-account/dashboard/dashboard.component';
 import { OrdersComponent } from './my-account/orders/orders.component';
 import { DownloadsComponent } from './my-account/downloads/downloads.component';
@@ -15,7 +14,6 @@ import { LogoutComponent } from './my-account/logout/logout.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './footer/about/about.component';
 import { ReturnsComponent } from './footer/customer-care/returns/returns.component';
-import { ShippingComponent } from './footer/customer-care/shipping-delivery/shipping-delivery.component';
 import { SizeGuideComponent } from './footer/customer-care/size-guide/size-guide.component';
 import { FaqComponent } from './footer/quick-links/faq/faq.navbar.component';
 import { FaqOrderComponent } from './footer/quick-links/faq/faq-order/faq.order.component';
@@ -42,8 +40,6 @@ import { UserRoutingModule } from './user.routing.module';
     CheckoutComponent,
     CartComponent,
 
-    LookbokComponent,
-
     DashboardComponent,
     OrdersComponent,
     DownloadsComponent,
@@ -53,7 +49,6 @@ import { UserRoutingModule } from './user.routing.module';
     LogoutComponent,
     AboutComponent,
     ReturnsComponent,
-    ShippingComponent,
     SizeGuideComponent,
 
     FaqComponent,

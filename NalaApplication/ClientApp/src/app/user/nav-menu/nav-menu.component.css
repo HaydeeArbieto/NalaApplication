@@ -2,6 +2,10 @@
   padding: 2px;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 2.5rem;
+}
+
 #cart {
   width: 23px;
   height: 23px;

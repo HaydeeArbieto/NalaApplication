@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './faq.navbar.component.html',
   styleUrls: ['./faq.navbar.component.css'],
 })
-export class FaqComponent {
-}
+export class FaqComponent { }

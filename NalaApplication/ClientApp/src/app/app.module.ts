@@ -4,20 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
 
-
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 
-
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
-
-
-
 
 
 const appRoutes: Routes = [

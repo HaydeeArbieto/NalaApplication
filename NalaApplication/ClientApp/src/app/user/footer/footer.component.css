@@ -1,26 +1,35 @@
 #facebook-img, #instagram-img, #snapchat-img {
   width: 30px;
   height: 30px;
+  margin-left: 25px;
 }
 
 #facebook-img {
 }
 
 #main-footer {
-  margin: 50px;
   border-top: 20px solid;
   border-color: rgb(255,165,0);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#container-menu-footer {
+  display: block;
+  justify-content: center;
 }
 
 #links-div {
-  padding-left: 800px;
-  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
 }
+
 footer h3 {
   color: #9a9a9a;
 }
 
-#about, #returns, #shipping-delivery, #size-guide, #faq-div a {
+#about, #returns, #size-guide, #faq-div a {
   color: #9a9a9a;
 }
 
@@ -28,6 +37,6 @@ footer h3 {
   padding-left: 20px;
 }
 
-#about:hover, #returns:hover, #shipping-delivery:hover, #size-guide:hover, #faq-div a:hover {
+#about:hover, #returns:hover, #size-guide:hover, #faq-div a:hover {
   color: rgb(255,165,0);
 }
