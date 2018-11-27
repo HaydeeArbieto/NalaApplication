@@ -48,7 +48,12 @@ const routes: Routes = [
         path: 'my-account', component: MyAccountComponent,
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          { path: 'dashboard', component: DashboardComponent },
+          { path: 'dashboard', component: DashboardComponent, 
+            children: [
+              { path: 'account-details', component: AccountDetailsComponent },
+              { path: 'orders', component: OrdersComponent },
+            ]
+          },
           { path: 'orders', component: OrdersComponent },
           { path: 'downloads', component: DownloadsComponent },
           { path: 'addresses', component: AddressesComponent },

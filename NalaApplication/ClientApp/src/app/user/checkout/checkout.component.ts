@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { enableProdMode } from '@angular/core';
-//import { CheckoutJS } from './checkout';
-import { Countries} from 'angular-countries';
 
 @Component({
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
 })
-export class CheckoutComponent {
-
+export class CheckoutComponent  {
+  
   public show: boolean = false;
   public buttonName: any = 'Yes';
 
   display = 'none';
 
   ngOnInit() { }
-
+  
   toggle() {
     this.show = !this.show;
 
@@ -36,6 +33,7 @@ export class CheckoutComponent {
     this.display = 'none';
   }
 
+  
 }
  
  

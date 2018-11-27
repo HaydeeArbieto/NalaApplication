@@ -1,8 +1,12 @@
 <div>
   <p>
     Hello <strong>admin &nbsp;</strong>(not <strong>admin?</strong> Log out)
-  </p>  
-  <p>
-    From your account dashboard you can view your recent orders, manage your shipping and billing addresses and edit your password and account details.
   </p>
+  <p>
+    From your account dashboard you can view your
+    <a class="nav-link" [routerLink]="['orders']">recent orders,</a> manage your
+    shipping and billing addresses and
+    <a class="nav-link" [routerLink]="['account-details']">edit your password and account details.</a>
+  </p>
+  <router-outlet></router-outlet>
 </div>
