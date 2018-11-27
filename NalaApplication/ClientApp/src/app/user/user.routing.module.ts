@@ -50,8 +50,10 @@ const routes: Routes = [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'dashboard', component: DashboardComponent, 
             children: [
+              //{ path: '', redirectTo: 'my-account', pathMatch: 'full' },
               { path: 'account-details', component: AccountDetailsComponent },
               { path: 'orders', component: OrdersComponent },
+              { path: 'addresses', component: AddressesComponent },
             ]
           },
           { path: 'orders', component: OrdersComponent },
