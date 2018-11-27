@@ -1,0 +1,19 @@
+button {
+  background-color: rgb(255,165,0);
+}
+
+#billing-div {
+  float: left;
+  /*margin-right: 30px;*/
+  width: 35%;
+}
+
+#shipping-div {
+  float: right;
+  width: 35%;
+}
+
+.row {
+  margin-top: 20px;
+  margin-left: 0px;
+}

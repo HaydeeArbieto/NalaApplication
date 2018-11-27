@@ -1,7 +1,7 @@
 console.log("Checkout js");
-var clientApp = () => {
+/*var clientApp = () => {
   console.log("Hej");
-}
+}*/
 /*require('angular-countries');
 
 var clientApp = angular.module('clientApp', [

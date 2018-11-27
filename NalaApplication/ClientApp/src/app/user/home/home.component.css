@@ -25,10 +25,13 @@ img {
   font-weight: bold;
 }*/
 
-#name {
+#name, #price {
   font-weight: bold;
 }
 
+.column p {
+  text-align: center;
+}
 /*.split {
   height: 100%;
   width: 50%;

@@ -8,7 +8,7 @@
   margin: 50px;
   width: 700px;
   border-bottom: 20px solid;
-  border-color: rgb(255,165,0);
+  border-color: rgb(255,165,0); /*Main color to orange*/
   /* Align image center */
   display: block;
   margin-left: auto;

@@ -11,14 +11,18 @@
       </select>
     </div>
   </div>
-  <div id="div-img" *ngFor="let product of products" class="split">
-    <img src="{{product.imagePath}}">
-    <p id="name">{{product.name}}</p>
-    <p>{{product.description}}</p>
-    <div>{{product.price}} &nbsp; SEK</div>
-    <div>Category: {{product.category.name}}</div>
-    <div>Size: {{product.size.name}}</div>
-    <div>Stock: {{product.stock}}</div>
+  <div class="row">
+    <div id="div-img" *ngFor="let product of products" class="split">
+      <div class="column">
+        <img src="{{product.imagePath}}">
+        <p id="name">{{product.name}}</p>
+        <p>{{product.description}}</p>
+        <p id="price">{{product.price}} kr</p>
+        <p>Category: {{product.category.name}}</p>
+        <p>Size: {{product.size.name}}</p>
+        <p>Stock: {{product.stock}}</p>
+      </div>
+    </div>
   </div>
 </div>
 

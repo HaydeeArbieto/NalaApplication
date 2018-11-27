@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { enableProdMode } from '@angular/core';
-import { CheckoutJS } from './checkout';
+//import { CheckoutJS } from './checkout';
 import { Countries} from 'angular-countries';
 
 @Component({

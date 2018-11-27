@@ -4,7 +4,7 @@
     padding-top: 50px;
   }
 }*/
-
+/* 9a9a9a:main-color-to- all*/
 #logo-image {
   margin-top: 140px;
   margin-bottom:20px;
@@ -15,11 +15,9 @@
   display: initial;
   position: relative;
   margin-left: 36%;
-  
 }
 
-#div-navbar2 a {
-  color: #9a9a9a; /*main-color-to- all*/
+#main-navbar a {
   font-weight: bold;
   font-size: 15px;
 }
@@ -29,7 +27,7 @@
   height: 27px;
 }
 
-#div-navbar2 a {
+#div-navbar a {
   padding: 25px;
 }
 
