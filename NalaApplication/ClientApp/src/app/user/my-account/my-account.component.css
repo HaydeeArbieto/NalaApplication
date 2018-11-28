@@ -1,28 +1,29 @@
 #account-div {
-  margin-top: 50px;
-  margin-left: 200px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .navbar-fixed-left .navbar-nav > li {
   float: none;
-  width: 139px;
+  width: 275px;
 }
 
 .navbar-inverse {
-  background-color: antiquewhite;
-  border-color: #080808;
+  background-color: #eaeaea;
   display: table;
 }
 
 #left-div {
-  width: 18%;
+  width: 20%;
+  border: none;
 }
 
 #router-div {
   margin-left: 50px;
   margin-bottom: 50px;
   float: right;
-  width: 50%;
+  width: 70%;
 }
 
 li:hover a {
@@ -35,4 +36,9 @@ a:active {
 
 a {
   font-weight: bold;
+  margin-left: 20px;
+}
+
+li {
+  border-bottom: groove;
 }
