@@ -3,35 +3,36 @@
   margin-left: 200px;
 }
 
-.navbar-fixed-left {
-   width: 200px;
- }
-
 .navbar-fixed-left .navbar-nav > li {
   float: none;
   width: 139px;
 }
 
 .navbar-inverse {
-  background-color: white;
-  border-color: #080808;
-}
-
-#router-div {
   background-color: antiquewhite;
-  margin-left: 50px;
-  margin-bottom: 50px;
+  border-color: #080808;
+  display: table;
 }
 
 #left-div {
-   width: 18%;
+  width: 18%;
 }
 
 #router-div {
+  margin-left: 50px;
+  margin-bottom: 50px;
   float: right;
   width: 50%;
- }
+}
 
 li:hover a {
   color: rgb(255,165,0);
+}
+
+a:active {
+  color: rgb(255,165,0);
+}
+
+a {
+  font-weight: bold;
 }

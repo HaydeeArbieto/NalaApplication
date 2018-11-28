@@ -40,7 +40,7 @@ import { UserRoutingModule } from './user.routing.module';
     HomeComponent,
     NavMenuComponent,
     FooterComponent,
-    HomeComponent,
+    
     MyAccountComponent,
     CheckoutComponent,
     CartComponent,

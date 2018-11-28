@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { MyAccountComponent } from './my-account/my-account.component';
+
 import { DashboardComponent } from './my-account/dashboard/dashboard.component';
 import { OrdersComponent } from './my-account/orders/orders.component';
 import { DownloadsComponent } from './my-account/downloads/downloads.component';
@@ -86,7 +87,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class UserRoutingModule { }
-
-   
-   
-

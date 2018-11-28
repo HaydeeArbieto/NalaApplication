@@ -3,9 +3,9 @@
     Hello <strong>admin &nbsp;</strong>(not <strong>admin?</strong> Log out)
   </p>
   <p>
-    From your account dashboard you can view your <a class="nav-link" [routerLink]="['orders']">recent orders,</a> manage your
-    <a class="nav-link" [routerLink]="['addresses']">shipping and billing addresses</a> and
-    <a class="nav-link" [routerLink]="['account-details']">edit your password and account details.</a>
+    From your account dashboard you can view your <a [routerLink]="['orders']">recent orders,</a> manage your
+    <a [routerLink]="['addresses']">shipping and billing addresses</a> and
+    <a [routerLink]="['account-details']">edit your password and account details.</a>
   </p>
   <router-outlet></router-outlet>
 </div>

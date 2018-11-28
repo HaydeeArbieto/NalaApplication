@@ -1,3 +1,7 @@
 #logout-div {
-  border: dashed;
+  background-color: #eaeaea;
+}
+
+p {
+  padding: 30px;
 }
