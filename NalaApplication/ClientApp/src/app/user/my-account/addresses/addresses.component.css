@@ -2,8 +2,13 @@
   margin-bottom: 45px;
 }
 
+#addresses-div p{
+  font-size: 14px;
+}
+
 button {
   background-color: rgb(255,165,0);
+  border: none;
 }
 
 #billing-div {
