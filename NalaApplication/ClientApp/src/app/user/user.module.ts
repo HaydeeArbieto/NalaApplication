@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
 import { MyAccountComponent } from './my-account/my-account.component';
+import { LoginComponent } from './my-account/login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 
@@ -42,6 +44,7 @@ import { UserRoutingModule } from './user.routing.module';
     FooterComponent,
     
     MyAccountComponent,
+    LoginComponent,
     CheckoutComponent,
     CartComponent,
 

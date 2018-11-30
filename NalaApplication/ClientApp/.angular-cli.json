@@ -22,7 +22,7 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css"
       ],
-      "scripts": ["js/main.js", "js/checkout.js"],
+      "scripts": [ "js/main.js", "js/checkout.js", "js/login.js" ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

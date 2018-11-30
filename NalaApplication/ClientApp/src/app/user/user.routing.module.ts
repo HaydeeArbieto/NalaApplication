@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { MyAccountComponent } from './my-account/my-account.component';
+import { LoginComponent } from './my-account/login/login.component';
 
 import { DashboardComponent } from './my-account/dashboard/dashboard.component';
 import { OrdersComponent } from './my-account/orders/orders.component';
@@ -46,26 +47,25 @@ const routes: Routes = [
       { path: 'terms-conditions', component: TermsConditionsComponent },
       { path: 'contact', component: ContactComponent },
       {
-        path: 'my-account', component: MyAccountComponent,
+        path: 'my-account', component: LoginComponent,
         children: [
-          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          { path: 'dashboard', component: DashboardComponent, 
+          { path: '', redirectTo: 'login', pathMatch: 'full' },
+          { path: 'login', component: LoginComponent },
+          { path: 'my-account-home', component: MyAccountComponent , 
             children: [
-              //{ path: '', redirectTo: 'my-account', pathMatch: 'full' },
-              { path: 'account-details', component: AccountDetailsComponent },
+              { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+              { path: 'dashboard', component: DashboardComponent },
               { path: 'orders', component: OrdersComponent },
+              { path: 'downloads', component: DownloadsComponent },
               { path: 'addresses', component: AddressesComponent },
+              { path: 'payment-methods', component: PaymentsMethodsComponent },
+              { path: 'account-details', component: AccountDetailsComponent },
+              { path: 'customer-logout', component: LogoutComponent }
             ]
           },
-          { path: 'orders', component: OrdersComponent },
-          { path: 'downloads', component: DownloadsComponent },
-          { path: 'addresses', component: AddressesComponent },
-          { path: 'payment-methods', component: PaymentsMethodsComponent },
-          { path: 'account-details', component: AccountDetailsComponent },
-          { path: 'customer-logout', component: LogoutComponent }
         ]
-      },
-       {
+       },
+        {
           path: 'order', component: FaqComponent,
           children: [
           { path: '', redirectTo: 'faq-order', pathMatch: 'full' },
